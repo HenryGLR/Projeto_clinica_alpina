@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clínica Médica Vila Alpina</title>
 
-  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="src/css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,353 +14,406 @@
 
 <body>
 
-  <header class="header">
-    <div class="container header-content">
-      <div class="logo-area">
-        <img src="src/assets/logo.png" alt="Clínica Médica Vila Alpina" class="logo">
+<header class="header">
+  <div class="container header-content">
+
+    <a href="./index.html#inicio" class="logo-area">
+      <img src="src/assets/logo.png" alt="Clínica Médica Vila Alpina" class="logo">
+
+      <div class="logo-text">
+        <h2>Clínica Médica Vila Alpina</h2>
+        <p>Saúde completa em um só lugar</p>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="./index.html#inicio">Início</a>
+      <a href="./index.html#sobre">Sobre</a>
+      <a href="./index.html#especialidades">Especialidades</a>
+      <a href="./exames.html">Exames</a>
+      <a href="./index.html#convenios">Convênios</a>
+      <a href="./index.html#agendamento">Agendamento</a>
+    </nav>
+
+    <a href="./index.html#agendamento" class="header-cta">
+      Agendar consulta
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+<section id="inicio" class="hero">
+  <div class="container hero-content">
+
+    <div class="hero-text">
+      <span class="tag">🏥 Tradição, cuidado e confiança</span>
+
+      <h1>Cuidado médico completo para você e sua família.</h1>
+
+      <p>
+        Consultas, exames, especialidades e atendimento humanizado em uma clínica tradicional da Vila Alpina.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="./index.html#agendamento" class="btn-primary">Agendar pelo WhatsApp</a>
+        <a href="./exames.html" class="btn-secondary">Ver exames</a>
+      </div>
+
+      <div class="stats">
+        <div>
+          <strong>50+</strong>
+          <span>anos de história</span>
+        </div>
 
         <div>
-          <h2>Clínica Médica Vila Alpina</h2>
-          <p>Saúde completa em um só lugar</p>
+          <strong>20+</strong>
+          <span>especialidades</span>
+        </div>
+
+        <div>
+          <strong>100+</strong>
+          <span>procedimentos</span>
         </div>
       </div>
-
-      <nav class="nav">
-        <a href="#inicio">Início</a>
-        <a href="#quem-somos">Quem Somos</a>
-        <a href="#especialidades">Especialidades</a>
-        <a href="#exames">Exames</a>
-        <a href="#agendamento">Agendamento</a>
-        <a href="#contato">Contato</a>
-      </nav>
-
-      <a href="#agendamento" class="btn-header">Agendar consulta</a>
     </div>
-  </header>
 
-  <main>
+    <div class="hero-card">
+      <div class="premium-card">
+        <img src="src/assets/logo.png" alt="Logo Clínica" class="hero-logo">
 
-    <section id="inicio" class="hero">
-      <div class="container hero-content">
-
-        <div class="hero-text">
-          <span class="tag">Tradição, cuidado e confiança</span>
-
-          <h1>Cuidado médico completo com a confiança que sua família merece.</h1>
-
-          <p>
-            Consultas, exames, procedimentos e especialidades em uma clínica tradicional da Vila Alpina,
-            com agendamento rápido, estrutura completa e atendimento humanizado.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#agendamento" class="btn-primary">Agendar pelo WhatsApp</a>
-            <a href="#quem-somos" class="btn-secondary">Conheça a clínica</a>
-          </div>
-
-          <div class="stats">
-            <div>
-              <strong>50+</strong>
-              <span>anos de história</span>
-            </div>
-
-            <div>
-              <strong>50+</strong>
-              <span>colaboradores</span>
-            </div>
-
-            <div>
-              <strong>20+</strong>
-              <span>especialidades</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="card-glass">
-            <div class="hero-logo-box">
-              <img src="src/assets/logo.png" alt="Logo Clínica" class="hero-logo">
-            </div>
-
-            <h3>Atendimento integrado</h3>
-
-            <p>
-              Consultas médicas, exames, odontologia, ortodontia, procedimentos e suporte
-              em um só lugar.
-            </p>
-
-            <div class="mini-cards">
-              <div>Consultas</div>
-              <div>Exames</div>
-              <div>Convênios</div>
-              <div>WhatsApp</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="info-section">
-      <div class="container info-grid">
-
-        <div class="info-card">
-          <h3>Horários estendidos</h3>
-          <p>Agendas amplas e atendimento nos 3 períodos para maior comodidade.</p>
-        </div>
-
-        <div class="info-card">
-          <h3>Localização acessível</h3>
-          <p>Rua Costa Barros, 505 - Vila Alpina - São Paulo - SP.</p>
-        </div>
-
-        <div class="info-card">
-          <h3>Atendimento completo</h3>
-          <p>Especialidades, exames, odontologia, ortodontia e serviços diagnósticos.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="quem-somos" class="section quem-somos">
-      <div class="container quem-grid">
-
-        <div class="quem-card-logo">
-          <div class="logo-frame">
-            <img src="src/assets/logo.png" alt="Clínica Médica Vila Alpina">
-          </div>
-
-          <div class="quem-numeros">
-            <div>
-              <strong>50+</strong>
-              <span>anos de experiência</span>
-            </div>
-
-            <div>
-              <strong>50+</strong>
-              <span>colaboradores profissionais</span>
-            </div>
-
-            <div>
-              <strong>20+</strong>
-              <span>anos de direção clínica</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="quem-texto">
-          <span class="tag-dark">Quem Somos</span>
-
-          <h2>Tradição, estrutura e cuidado humanizado na Vila Alpina.</h2>
-
-          <p>
-            A Clínica Médica Vila Alpina é uma instituição com mais de 50 anos de experiência
-            no cuidado à saúde de seus pacientes. Localizada na Rua Costa Barros, 505, na Vila Alpina,
-            oferece atendimento completo e especializado em diversas áreas da saúde.
-          </p>
-
-          <p>
-            Nossos serviços incluem especialidades médicas, exames, odontologia, ortodontia,
-            pronto atendimento, consultas médicas e odontológicas, exames de diagnóstico,
-            serviço de ambulância, além de convênios com empresas e condomínios da região.
-          </p>
-
-          <p>
-            Contamos com uma equipe de mais de 50 colaboradores profissionais e dedicados,
-            sempre prontos para atender nossos pacientes com qualidade, atenção e respeito.
-          </p>
-
-          <p>
-            Sob direção clínica do Dr. Walmir Rigueira, à frente da empresa há mais de 20 anos,
-            a Clínica Vila Alpina presta serviços de excelência e busca ser referência em saúde
-            na região de São Paulo e ABC Paulista.
-          </p>
-
-          <div class="missao-grid">
-            <div>
-              <h3>Missão</h3>
-              <p>Oferecer atendimento completo e de qualidade em diversas áreas da saúde.</p>
-            </div>
-
-            <div>
-              <h3>Visão</h3>
-              <p>Ser referência em saúde na região, com serviços de excelência aos pacientes.</p>
-            </div>
-
-            <div>
-              <h3>Valores</h3>
-              <p>Respeito, responsabilidade, comprometimento, tecnologia e qualidade.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="especialidades" class="section white">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Especialidades</span>
-          <h2>Especialidades apresentadas com clareza e confiança.</h2>
-          <p>Escolha uma especialidade e solicite seu agendamento pelo WhatsApp.</p>
-        </div>
-
-        <input
-          type="text"
-          id="buscarEspecialidade"
-          class="search-input"
-          placeholder="Buscar especialidade..."
-        >
-
-        <div class="cards-grid" id="listaEspecialidades"></div>
-
-      </div>
-    </section>
-
-    <section id="exames" class="section dark">
-      <div class="container">
-
-        <div class="section-title light">
-          <span>Exames e procedimentos</span>
-          <h2>Uma clínica completa, organizada para o paciente entender rápido.</h2>
-          <p>Exames, procedimentos e serviços disponíveis na Clínica Médica Vila Alpina.</p>
-        </div>
-
-        <div class="procedure-groups">
-
-          <div class="procedure-card">
-            <h3>Cardiológicos</h3>
-            <p>Eletrocardiograma</p>
-            <p>Ecocardiograma</p>
-            <p>Holter</p>
-            <p>Teste ergométrico</p>
-          </div>
-
-          <div class="procedure-card">
-            <h3>Imagem e diagnóstico</h3>
-            <p>Radiologia</p>
-            <p>Ultrassonografia</p>
-            <p>Doppler</p>
-            <p>Exames laboratoriais</p>
-          </div>
-
-          <div class="procedure-card">
-            <h3>Otorrino e audição</h3>
-            <p>Audiometria</p>
-            <p>Impedanciometria</p>
-            <p>Otoneurológico</p>
-          </div>
-
-          <div class="procedure-card">
-            <h3>Outros serviços</h3>
-            <p>Fisioterapia</p>
-            <p>Odontologia</p>
-            <p>Ortodontia</p>
-            <p>Clareamento a laser</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section id="agendamento" class="section agendamento">
-      <div class="container agendamento-grid">
-
-        <div class="agendamento-text">
-          <span class="tag">Agendamento inteligente</span>
-
-          <h2>O paciente escolhe o convênio e o site mostra apenas o que pode ser agendado.</h2>
-
-          <p>
-            Se escolher Bio Vida, por exemplo, aparecem apenas Clínica Geral e Pediatria.
-            Isso evita erros, organiza o atendimento e facilita o trabalho da recepção.
-          </p>
-
-          <div class="boneco-box">
-            <img src="src/assets/boneco.png" alt="Assistente de agendamento">
-
-            <div>
-              <h3>Assistente de agendamento</h3>
-              <p>Preencha seus dados e a recepção confirma pelo WhatsApp.</p>
-            </div>
-          </div>
-        </div>
-
-        <form class="form-card" id="formAgendamento">
-
-          <h3>Solicitar agendamento</h3>
-
-          <p>A mensagem será enviada pronta para o WhatsApp da clínica.</p>
-
-          <label for="nome">Nome completo</label>
-          <input type="text" id="nome" required placeholder="Digite seu nome">
-
-          <label for="telefone">Telefone</label>
-          <input type="text" id="telefone" required placeholder="(11) 99999-9999">
-
-          <label for="data">Data desejada</label>
-          <input type="date" id="data" required>
-
-          <label for="convenio">Convênio</label>
-          <select id="convenio" required></select>
-
-          <label for="especialidade">Especialidade</label>
-          <select id="especialidade" required></select>
-
-          <label for="medico">Médico / Equipe</label>
-          <select id="medico" required></select>
-
-          <label for="observacao">Observações</label>
-          <textarea id="observacao" placeholder="Ex: melhor horário, primeira consulta..."></textarea>
-
-          <button type="submit">Enviar para WhatsApp</button>
-
-          <small>
-            O envio não confirma automaticamente. A recepção retornará pelo WhatsApp.
-          </small>
-
-        </form>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="contato" class="footer">
-    <div class="container footer-grid">
-
-      <div>
-        <img src="src/assets/logo.png" alt="Clínica Médica Vila Alpina" class="footer-logo">
-
-        <h3>Clínica Médica Vila Alpina</h3>
+        <h3>Atendimento integrado</h3>
 
         <p>
-          Consultas, exames e procedimentos com atendimento humanizado,
-          qualidade e respeito.
+          Consulta, exames, convênios e suporte pelo WhatsApp.
         </p>
+
+        <div class="mini-cards">
+          <div>🩺 Consultas</div>
+          <div>🧪 Exames</div>
+          <div>🤝 Convênios</div>
+          <div>💬 WhatsApp</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="quick-info">
+  <div class="container quick-grid">
+
+    <div class="quick-card">
+      <h3>⏰ Horário</h3>
+      <p>Segunda a sábado com atendimento da recepção.</p>
+    </div>
+
+    <div class="quick-card">
+      <h3>📍 Endereço</h3>
+      <p>Rua Costa Barros, 505 - Vila Alpina - São Paulo.</p>
+    </div>
+
+    <div class="quick-card">
+      <h3>💬 Agendamento</h3>
+      <p>Mensagem automática com convênio, especialidade e dados do paciente.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="sobre" class="section sobre">
+  <div class="container sobre-grid">
+
+    <div>
+      <span class="section-label">🏥 Sobre nós</span>
+
+      <h2>Mais de uma clínica. Um centro de cuidado para toda a família.</h2>
+
+      <p>
+        A Clínica Médica Vila Alpina oferece atendimento médico, exames e procedimentos com foco em confiança,
+        praticidade e cuidado humanizado.
+      </p>
+
+      <p>
+        Nosso compromisso é unir tradição, estrutura e atendimento próximo, proporcionando mais conforto,
+        segurança e agilidade para os pacientes da região.
+      </p>
+
+      <div class="check-list">
+        <div>✅ Atendimento humanizado</div>
+        <div>✅ Diversas especialidades médicas</div>
+        <div>✅ Convênios organizados e transparentes</div>
+        <div>✅ Estrutura para consultas, exames e procedimentos</div>
+        <div>✅ Localização acessível na Vila Alpina</div>
+      </div>
+    </div>
+
+    <div class="sobre-box">
+      <img src="src/assets/boneco.png" alt="Assistente de agendamento">
+
+      <h3>Seu atendimento começa aqui</h3>
+
+      <p>
+        Escolha seu convênio, encontre a especialidade correta e solicite seu agendamento de forma rápida e organizada.
+      </p>
+
+      <div class="sobre-mini-info">
+        <div>
+          <strong>20+</strong>
+          <span>Especialidades</span>
+        </div>
+
+        <div>
+          <strong>20+</strong>
+          <span>Convênios</span>
+        </div>
+
+        <div>
+          <strong>100+</strong>
+          <span>Procedimentos</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="especialidades" class="section especialidades">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Especialidades</span>
+      <h2>Encontre a especialidade ideal para o seu cuidado.</h2>
+      <p>Busque uma especialidade ou veja todas abaixo.</p>
+    </div>
+
+    <input 
+      type="text" 
+      id="buscarEspecialidade" 
+      class="search-input" 
+      placeholder="🔍 Buscar especialidade..."
+    >
+
+    <div id="listaEspecialidades" class="cards-grid"></div>
+
+  </div>
+</section>
+
+<section id="convenios" class="section convenios">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Convênios</span>
+      <h2>Descubra o que seu convênio cobre.</h2>
+      <p>Selecione seu convênio e veja especialidades e exames disponíveis.</p>
+    </div>
+
+    <div class="convenio-box">
+      <label for="consultaConvenio">Escolha o convênio</label>
+      <select id="consultaConvenio"></select>
+
+      <div class="resultado">
+        <h3>🩺 Especialidades cobertas</h3>
+        <div id="resultadoEspecialidades" class="chips"></div>
+
+        <h3>🧪 Exames cobertos</h3>
+        <div id="resultadoExames" class="chips"></div>
+
+        <div id="resultadoObservacao" class="observacao"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section diferenciais">
+  <div class="container">
+
+    <div class="section-title">
+      <span>Diferenciais</span>
+      <h2>Por que escolher a Clínica Vila Alpina?</h2>
+    </div>
+
+    <div class="diferenciais-grid">
+
+      <div class="diferencial-card">
+        <div>🏥</div>
+        <h3>Clínica completa</h3>
+        <p>Consultas, exames e procedimentos em um só lugar.</p>
       </div>
 
-      <div>
-        <h4>Contato</h4>
-        <p>Tel/Fax: 2917-1717 | 2917-1122</p>
-        <p>WhatsApp: (11) 95970-1266</p>
-        <p>clinicalpina@uol.com.br</p>
+      <div class="diferencial-card">
+        <div>🩺</div>
+        <h3>Especialidades variadas</h3>
+        <p>Atendimento em diversas áreas médicas.</p>
       </div>
 
-      <div>
-        <h4>Endereço</h4>
-        <p>Rua Costa Barros, 505</p>
-        <p>Vila Alpina - São Paulo - SP</p>
-        <p>www.clinicaalpina.com.br</p>
+      <div class="diferencial-card">
+        <div>🤝</div>
+        <h3>Convênios organizados</h3>
+        <p>O site mostra apenas o que cada convênio cobre.</p>
+      </div>
+
+      <div class="diferencial-card">
+        <div>💬</div>
+        <h3>WhatsApp inteligente</h3>
+        <p>Mensagem pronta para facilitar o atendimento.</p>
       </div>
 
     </div>
-  </footer>
 
-  <a href="#agendamento" class="whatsapp-float">WhatsApp</a>
+  </div>
+</section>
 
-  <script src="src/js/script.js"></script>
+<section id="agendamento" class="section agendamento">
+  <div class="container agendamento-grid">
+
+    <div class="agendamento-text">
+      <span class="tag">💬 Agendamento inteligente</span>
+
+      <h2>Escolha o convênio e veja apenas as opções disponíveis.</h2>
+
+      <p>
+        O sistema filtra automaticamente as especialidades. Depois, a mensagem vai pronta para o WhatsApp da clínica.
+      </p>
+
+      <div class="check-list">
+        <div>✅ Evita erro de agendamento</div>
+        <div>✅ Ajuda a recepção</div>
+        <div>✅ Mais rápido para o paciente</div>
+      </div>
+
+      <div class="boneco-box">
+        <img src="src/assets/boneco.png" alt="Assistente">
+
+        <div>
+          <h3>Precisa agendar?</h3>
+          <p>Preencha o formulário e aguarde a confirmação da recepção.</p>
+        </div>
+      </div>
+    </div>
+
+    <form id="formAgendamento" class="form-card">
+      <h3>Solicitar agendamento</h3>
+
+      <p>
+        Preencha os dados para enviar pelo WhatsApp.
+      </p>
+
+      <label for="nome">Nome completo</label>
+      <input 
+        type="text" 
+        id="nome" 
+        required 
+        placeholder="Digite seu nome"
+      >
+
+      <label for="telefone">Telefone</label>
+      <input 
+        type="text" 
+        id="telefone" 
+        required 
+        placeholder="(11) 99999-9999"
+      >
+
+      <label for="data">Data desejada</label>
+      <input 
+        type="date" 
+        id="data" 
+        required
+      >
+
+      <label for="convenio">Convênio</label>
+      <select id="convenio" required></select>
+
+      <div id="avisoConvenio" class="aviso"></div>
+
+      <label for="especialidade">Especialidade</label>
+      <select id="especialidade" required></select>
+
+      <label for="medico">Médico / Equipe</label>
+      <select id="medico" required></select>
+
+      <label for="observacao">Observações</label>
+      <textarea 
+        id="observacao" 
+        placeholder="Ex: melhor horário, primeira consulta..."
+      ></textarea>
+
+      <button type="submit">
+        Enviar para WhatsApp
+      </button>
+
+      <small>
+        O envio não confirma automaticamente. A recepção retornará pelo WhatsApp.
+      </small>
+    </form>
+
+  </div>
+</section>
+
+<section class="section exames-preview">
+  <div class="container exames-grid">
+
+    <div>
+      <span class="section-label">Exames e procedimentos</span>
+
+      <h2>Exames organizados de forma clara.</h2>
+
+      <p>
+        Acesse a página exclusiva de exames para visualizar categorias, procedimentos e informações de forma organizada.
+      </p>
+
+      <a href="./exames.html" class="btn-secondary">
+        Abrir página de exames
+      </a>
+    </div>
+
+    <div class="exames-cards">
+      <div>❤️ Cardiológicos</div>
+      <div>🩻 Imagem</div>
+      <div>🧪 Laboratoriais</div>
+      <div>👂 Audição</div>
+      <div>🫁 Pulmonares</div>
+      <div>👁️ Oftalmológicos</div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer id="contato" class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <img src="src/assets/logo.png" alt="Clínica Vila Alpina" class="footer-logo">
+
+      <h3>Clínica Médica Vila Alpina</h3>
+
+      <p>
+        Consultas, exames e procedimentos com atendimento humanizado.
+      </p>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <p>Tel/Fax: 2917-1717 | 2917-1122</p>
+      <p>WhatsApp: (11) 95970-1266</p>
+      <p>clinicalpina@uol.com.br</p>
+    </div>
+
+    <div>
+      <h4>Endereço</h4>
+      <p>Rua Costa Barros, 505</p>
+      <p>Vila Alpina - São Paulo - SP</p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="src/js/script.js"></script>
+
 </body>
 </html>

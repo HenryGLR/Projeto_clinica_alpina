@@ -298,7 +298,8 @@ const convenios = {
       "Ecocardiograma"
     ]
   },
-    "GEAP": {
+
+  "GEAP": {
     observacao: "",
     especialidades: [
       "Cardiologia",
@@ -537,7 +538,8 @@ const convenios = {
     ],
     exames: []
   },
-    "VIVEST": {
+
+  "VIVEST": {
     observacao: "",
     especialidades: [
       "Cardiologia",
@@ -601,6 +603,252 @@ const convenios = {
       "Otorrinolaringologia"
     ],
     exames: []
+  },
+
+  "MEDSERVICE": {
+    observacao: "",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Sangue",
+      "Audiometria",
+      "Papanicolau",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Gesso",
+      "Inalação",
+      "Lavagem de Ouvido",
+      "Mapeamento de Retina",
+      "Medicação",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia",
+      "Tomografia",
+      "Densitometria",
+      "Mamografia"
+    ]
+  },
+
+  "MEDSENIOR": {
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Dermatologia",
+      "Otorrinolaringologia"
+    ],
+    exames: [
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Ultrassonografia",
+      "Tomografia",
+      "Mamografia",
+      "Densitometria"
+    ]
+  },
+
+  "MEDSELECT": {
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Holter 24h",
+      "MAPA 24h",
+      "Mapeamento Cerebral",
+      "Mapeamento de Retina",
+      "Nasofibroscopia",
+      "Otoneurológico",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Ultrassonografia",
+      "Tomografia",
+      "Densitometria Óssea",
+      "Mamografia"
+    ]
+  },
+
+  "NEW LEADER": {
+    observacao: "Paciente deve trazer autorização.",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Holter 24h",
+      "Gesso",
+      "Inalação",
+      "Lavagem de Ouvido",
+      "MAPA 24h",
+      "Otoneurológico",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia"
+    ]
+  },
+
+  "OMINT": {
+    observacao: "Necessário autorização.",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Proctologia",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Holter 24h",
+      "Gesso",
+      "Inalação",
+      "Infiltração",
+      "Lavagem de Ouvido",
+      "Mapeamento Cerebral",
+      "Medicação",
+      "Nasofibroscopia",
+      "Otoneurológico",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia"
+    ]
+  },
+
+  "PORTO ITAÚ": {
+    observacao: "",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria"
+    ],
+    exames: [
+      "Cauterização de Útero",
+      "Papanicolau",
+      "Ecocardiograma",
+      "Otoneurológico"
+    ]
+  },
+
+  "PLENA SAÚDE": {
+    observacao: "Nenhum exame é realizado.",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: []
+  },
+
+  "SÃO CRISTÓVÃO": {
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Pediatria",
+      "Vascular"
+    ],
+    exames: [
+      "Eletrocardiograma"
+    ]
   }
 };
 
@@ -628,13 +876,11 @@ const resultadoObservacao = document.getElementById("resultadoObservacao");
 const avisoConvenio = document.getElementById("avisoConvenio");
 
 function renderizarEspecialidades(lista) {
-
-  if(!listaEspecialidades) return;
+  if (!listaEspecialidades) return;
 
   listaEspecialidades.innerHTML = "";
 
   lista.forEach(item => {
-
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -646,68 +892,59 @@ function renderizarEspecialidades(lista) {
     `;
 
     listaEspecialidades.appendChild(card);
-
   });
 }
 
 function preencherConvenios() {
-
   Object.keys(convenios).forEach(nome => {
-
-    if(convenioSelect){
+    if (convenioSelect) {
       const option = document.createElement("option");
       option.value = nome;
       option.textContent = nome;
       convenioSelect.appendChild(option);
     }
 
-    if(consultaConvenio){
+    if (consultaConvenio) {
       const option2 = document.createElement("option");
       option2.value = nome;
       option2.textContent = nome;
       consultaConvenio.appendChild(option2);
     }
-
   });
-
 }
 
 function atualizarEspecialidadesAgendamento() {
-
-  if(!convenioSelect) return;
+  if (!convenioSelect || !especialidadeSelect) return;
 
   const convenioAtual = convenioSelect.value;
   const dados = convenios[convenioAtual];
 
+  if (!dados) return;
+
   especialidadeSelect.innerHTML = "";
 
   dados.especialidades.forEach(item => {
-
     const option = document.createElement("option");
     option.value = item;
     option.textContent = item;
-
     especialidadeSelect.appendChild(option);
-
   });
 
-  if(dados.observacao){
-
-    avisoConvenio.style.display = "block";
-    avisoConvenio.textContent = dados.observacao;
-
-  }else{
-
-    avisoConvenio.style.display = "none";
-
+  if (avisoConvenio) {
+    if (dados.observacao) {
+      avisoConvenio.style.display = "block";
+      avisoConvenio.textContent = dados.observacao;
+    } else {
+      avisoConvenio.style.display = "none";
+      avisoConvenio.textContent = "";
+    }
   }
 
   atualizarMedicos();
 }
 
 function atualizarMedicos() {
-
-  if(!especialidadeSelect) return;
+  if (!especialidadeSelect || !medicoSelect) return;
 
   medicoSelect.innerHTML = "";
 
@@ -718,80 +955,58 @@ function atualizarMedicos() {
   ];
 
   lista.forEach(item => {
-
     const option = document.createElement("option");
-
     option.value = item;
     option.textContent = item;
-
     medicoSelect.appendChild(option);
-
   });
-
 }
 
 function atualizarConsultaConvenio() {
-
-  if(!consultaConvenio) return;
+  if (!consultaConvenio || !resultadoEspecialidades || !resultadoExames) return;
 
   const convenioAtual = consultaConvenio.value;
   const dados = convenios[convenioAtual];
+
+  if (!dados) return;
 
   resultadoEspecialidades.innerHTML = "";
   resultadoExames.innerHTML = "";
 
   dados.especialidades.forEach(item => {
-
     const chip = document.createElement("span");
-
     chip.classList.add("chip");
     chip.textContent = item;
-
     resultadoEspecialidades.appendChild(chip);
-
   });
 
-  if(dados.exames.length > 0){
-
+  if (dados.exames.length > 0) {
     dados.exames.forEach(item => {
-
       const chip = document.createElement("span");
-
-      chip.classList.add("chip","exame");
+      chip.classList.add("chip", "exame");
       chip.textContent = item;
-
       resultadoExames.appendChild(chip);
-
     });
-
-  }else{
-
+  } else {
     const chip = document.createElement("span");
-
-    chip.classList.add("chip","vazio");
+    chip.classList.add("chip", "vazio");
     chip.textContent = "Nenhum exame disponível";
-
     resultadoExames.appendChild(chip);
-
   }
 
-  if(dados.observacao){
-
-    resultadoObservacao.style.display = "block";
-    resultadoObservacao.textContent = dados.observacao;
-
-  }else{
-
-    resultadoObservacao.style.display = "none";
-
+  if (resultadoObservacao) {
+    if (dados.observacao) {
+      resultadoObservacao.style.display = "block";
+      resultadoObservacao.textContent = dados.observacao;
+    } else {
+      resultadoObservacao.style.display = "none";
+      resultadoObservacao.textContent = "";
+    }
   }
-
 }
 
-if(buscaEspecialidade){
-
+if (buscaEspecialidade) {
   buscaEspecialidade.addEventListener("input", () => {
-
     const termo = buscaEspecialidade.value.toLowerCase();
 
     const filtrado = especialidades.filter(item =>
@@ -799,29 +1014,25 @@ if(buscaEspecialidade){
     );
 
     renderizarEspecialidades(filtrado);
-
   });
-
 }
 
-if(convenioSelect){
+if (convenioSelect) {
   convenioSelect.addEventListener("change", atualizarEspecialidadesAgendamento);
 }
 
-if(especialidadeSelect){
+if (especialidadeSelect) {
   especialidadeSelect.addEventListener("change", atualizarMedicos);
 }
 
-if(consultaConvenio){
+if (consultaConvenio) {
   consultaConvenio.addEventListener("change", atualizarConsultaConvenio);
 }
 
 const form = document.getElementById("formAgendamento");
 
-if(form){
-
-  form.addEventListener("submit", function(e){
-
+if (form) {
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     const nome = document.getElementById("nome").value;
@@ -846,27 +1057,45 @@ Olá! Gostaria de solicitar um agendamento.
 👨‍⚕️ Médico/Equipe: ${medico}
 
 📝 Observações:
-${observacao}
+${observacao || "Nenhuma"}
 `;
 
     const numero = "5511959701266";
-
     const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
-    window.open(link,"_blank");
+    window.open(link, "_blank");
+  });
+}
 
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileNav = document.getElementById("mobileNav");
+
+if (mobileMenuBtn && mobileNav) {
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileNav.classList.toggle("active");
+
+    if (mobileNav.classList.contains("active")) {
+      mobileMenuBtn.textContent = "×";
+    } else {
+      mobileMenuBtn.textContent = "☰";
+    }
   });
 
+  mobileNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
+      mobileMenuBtn.textContent = "☰";
+    });
+  });
 }
 
 renderizarEspecialidades(especialidades);
-
 preencherConvenios();
 
-if(convenioSelect){
+if (convenioSelect) {
   atualizarEspecialidadesAgendamento();
 }
 
-if(consultaConvenio){
+if (consultaConvenio) {
   atualizarConsultaConvenio();
 }

@@ -12,6 +12,7 @@ body{
   font-family:'Inter',sans-serif;
   background:#eef5fb;
   color:#1f2937;
+  overflow-x:hidden;
 }
 
 .container{
@@ -120,6 +121,51 @@ body{
 .header-cta:hover{
   transform:translateY(-3px);
   box-shadow:0 18px 40px rgba(2,132,199,.34);
+}
+
+.mobile-menu-btn{
+  display:none;
+  width:46px;
+  height:46px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#0f172a,#0369a1,#06b6d4);
+  color:white;
+  font-size:24px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 12px 28px rgba(2,132,199,.28);
+}
+
+.mobile-nav{
+  display:none;
+  width:90%;
+  max-width:1300px;
+  margin:0 auto 14px;
+  background:white;
+  border:1px solid #dbeafe;
+  border-radius:24px;
+  padding:14px;
+  box-shadow:0 20px 45px rgba(15,23,42,.12);
+}
+
+.mobile-nav a{
+  display:block;
+  text-decoration:none;
+  color:#0f172a;
+  font-weight:900;
+  padding:15px 18px;
+  border-radius:16px;
+  transition:.25s ease;
+}
+
+.mobile-nav a:hover{
+  background:#e0f2fe;
+  color:#075985;
+}
+
+.mobile-nav.active{
+  display:block;
 }
 
 /* ========================= */
@@ -1039,6 +1085,12 @@ body{
     display:none;
   }
 
+  .mobile-menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
   .hero-content,
   .sobre-grid,
   .agendamento-grid,
@@ -1101,52 +1153,86 @@ body{
     width:92%;
   }
 
+  .header{
+    background:rgba(255,255,255,.96);
+  }
+
   .header-content{
     height:78px;
+    gap:12px;
+  }
+
+  .logo-area{
+    gap:10px;
   }
 
   .logo{
-    width:54px;
-    height:54px;
+    width:52px;
+    height:52px;
   }
 
   .logo-text h2{
-    font-size:16px;
+    font-size:15px;
+    max-width:190px;
   }
 
   .logo-text p{
     display:none;
   }
 
+  .mobile-menu-btn{
+    width:43px;
+    height:43px;
+    font-size:22px;
+  }
+
+  .mobile-nav{
+    width:92%;
+    margin-bottom:10px;
+  }
+
   .hero{
-    padding-top:125px;
+    padding-top:115px;
+    padding-bottom:70px;
   }
 
   .hero h1{
-    font-size:36px;
+    font-size:34px;
+    line-height:1.1;
     letter-spacing:-1px;
   }
 
   .hero p{
-    font-size:17px;
+    font-size:16px;
+    line-height:1.7;
   }
 
-  .stats,
   .hero-buttons{
-    grid-template-columns:1fr;
     flex-direction:column;
     display:flex;
   }
 
-  .cards-grid,
-  .diferenciais-grid,
-  .exames-cards,
-  .sobre-mini-info{
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    text-align:center;
+  }
+
+  .stats{
     grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .premium-card{
+    margin-top:20px;
+  }
+
+  .quick-info{
+    padding:50px 0;
   }
 
   .section{
-    padding:78px 0;
+    padding:68px 0;
   }
 
   .section-title h2,
@@ -1156,11 +1242,34 @@ body{
     font-size:32px;
   }
 
+  .section-title p,
+  .sobre p,
+  .agendamento-text p,
+  .exames-grid p{
+    font-size:16px;
+  }
+
+  .cards-grid,
+  .diferenciais-grid,
+  .exames-cards,
+  .sobre-mini-info{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:24px;
+  }
+
   .premium-card,
   .form-card,
   .convenio-box,
   .sobre-box{
     padding:27px;
+  }
+
+  .boneco-box{
+    flex-direction:column;
+    text-align:center;
   }
 
   .carousel-btn{
@@ -1172,6 +1281,11 @@ body{
   }
 
   .carousel-slide img{
-    height:230px;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .footer{
+    padding:55px 0;
   }
 }

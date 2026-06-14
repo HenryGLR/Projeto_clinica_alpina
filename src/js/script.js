@@ -1,13 +1,13 @@
 const especialidades = [
-  { nome:"Acupuntura", emoji:"🧘", resumo:"Técnica terapêutica usada para auxiliar no alívio de dores, tensões e equilíbrio do organismo." },
+  { nome:"Acupuntura", emoji:"🩺", resumo:"Técnica terapêutica usada para auxiliar no alívio de dores, tensões e equilíbrio do organismo." },
   { nome:"Alergologia", emoji:"🤧", resumo:"Diagnóstico e acompanhamento de alergias respiratórias, alimentares e de pele." },
   { nome:"Cardiologia", emoji:"❤️", resumo:"Cuida da saúde do coração, pressão arterial, arritmias e prevenção cardiovascular." },
-  { nome:"Cirurgião", emoji:"🩹", resumo:"Avaliação médica para procedimentos cirúrgicos, pequenas cirurgias e encaminhamentos." },
+  { nome:"Cirurgião", emoji:"🏥", resumo:"Avaliação médica para procedimentos cirúrgicos, pequenas cirurgias e encaminhamentos." },
   { nome:"Clínica Geral", emoji:"🩺", resumo:"Atendimento inicial, avaliação geral de saúde e encaminhamento para especialistas." },
   { nome:"Dermatologia", emoji:"🧴", resumo:"Cuida da pele, cabelos, unhas, manchas, alergias, acne e alterações dermatológicas." },
   { nome:"Endocrinologia", emoji:"⚖️", resumo:"Acompanha hormônios, diabetes, tireoide, metabolismo e alterações hormonais." },
   { nome:"Fisioterapia", emoji:"💪", resumo:"Auxilia na recuperação de movimentos, dores musculares, lesões e reabilitação física." },
-  { nome:"Gastroenterologia", emoji:"🫃", resumo:"Cuida do sistema digestivo, estômago, intestino, refluxo e gastrite." },
+  { nome:"Gastroenterologia", emoji:"🍎", resumo:"Cuida do sistema digestivo, estômago, intestino, refluxo e gastrite." },
   { nome:"Ginecologia", emoji:"🌸", resumo:"Acompanha a saúde da mulher, prevenção, exames ginecológicos e orientações." },
   { nome:"Neurologia", emoji:"🧠", resumo:"Avalia dores de cabeça, tonturas, alterações neurológicas, memória e sistema nervoso." },
   { nome:"Nutricionista", emoji:"🥗", resumo:"Orienta alimentação, controle de peso, hábitos saudáveis e planos nutricionais." },
@@ -16,9 +16,9 @@ const especialidades = [
   { nome:"Ortopedia", emoji:"🦴", resumo:"Avalia ossos, articulações, coluna, dores, fraturas e lesões." },
   { nome:"Otorrinolaringologia", emoji:"👂", resumo:"Cuida de ouvido, nariz e garganta, sinusite, rouquidão e alterações auditivas." },
   { nome:"Pediatria", emoji:"👶", resumo:"Atendimento infantil, crescimento, prevenção e cuidados com crianças." },
-  { nome:"Pneumologia", emoji:"🫁", resumo:"Cuida da saúde respiratória, pulmões, falta de ar, tosse e doenças respiratórias." },
+  { nome:"Pneumologia", emoji:"💨", resumo:"Cuida da saúde respiratória, pulmões, falta de ar, tosse e doenças respiratórias." },
   { nome:"Psicologia", emoji:"💬", resumo:"Acolhimento emocional, escuta profissional, desenvolvimento pessoal e saúde mental." },
-  { nome:"Psiquiatria", emoji:"🧠", resumo:"Avaliação e tratamento médico de ansiedade, depressão e saúde mental." },
+  { nome:"Psiquiatria", emoji:"😊", resumo:"Avaliação e tratamento médico de ansiedade, depressão e saúde mental." },
   { nome:"Proctologia", emoji:"🏥", resumo:"Avalia alterações intestinais, hemorroidas, dores e sangramentos." },
   { nome:"Urologia", emoji:"🚹", resumo:"Cuida do sistema urinário, próstata, rins, bexiga e saúde masculina." },
   { nome:"Vascular", emoji:"🩸", resumo:"Acompanha circulação, varizes, dores nas pernas e vasos sanguíneos." }
@@ -220,6 +220,8 @@ const listaEspecialidades = document.getElementById("listaEspecialidades");
 const buscaEspecialidade = document.getElementById("buscarEspecialidade");
 
 const convenioSelect = document.getElementById("convenio");
+const carteirinhaBox = document.getElementById("carteirinhaBox");
+const carteirinhaInput = document.getElementById("carteirinha");
 const especialidadeSelect = document.getElementById("especialidade");
 
 const consultaConvenio = document.getElementById("consultaConvenio");
@@ -270,6 +272,19 @@ function preencherConvenios() {
   });
 }
 
+function atualizarCarteirinha() {
+  if (!convenioSelect || !carteirinhaBox || !carteirinhaInput) return;
+
+  if (convenioSelect.value === "Particular") {
+    carteirinhaBox.style.display = "none";
+    carteirinhaInput.required = false;
+    carteirinhaInput.value = "";
+  } else {
+    carteirinhaBox.style.display = "block";
+    carteirinhaInput.required = true;
+  }
+}
+
 function atualizarEspecialidadesAgendamento() {
   if (!convenioSelect || !especialidadeSelect) return;
 
@@ -280,12 +295,20 @@ function atualizarEspecialidadesAgendamento() {
 
   especialidadeSelect.innerHTML = "";
 
+  atualizarCarteirinha();
+
   if (dados.especialidades.length === 0) {
     const option = document.createElement("option");
     option.value = "";
     option.textContent = "Agendamento não disponível pelo site";
     especialidadeSelect.appendChild(option);
     especialidadeSelect.disabled = true;
+
+    if (carteirinhaBox && carteirinhaInput) {
+      carteirinhaBox.style.display = "none";
+      carteirinhaInput.required = false;
+      carteirinhaInput.value = "";
+    }
 
     if (avisoConvenio) {
       avisoConvenio.style.display = "block";
@@ -400,8 +423,18 @@ if (form) {
     const telefone = document.getElementById("telefone").value;
     const data = document.getElementById("data").value;
     const convenio = convenioSelect.value;
+    const carteirinha = carteirinhaInput ? carteirinhaInput.value.trim() : "";
     const especialidade = especialidadeSelect.value;
     const observacao = document.getElementById("observacao").value;
+
+    if (convenio !== "Particular" && !carteirinha) {
+      alert("Por favor, informe o número da carteirinha do convênio.");
+      return;
+    }
+
+    const textoCarteirinha = convenio === "Particular"
+      ? "Não se aplica"
+      : carteirinha;
 
     const mensagem = `
 Olá! Gostaria de solicitar um agendamento.
@@ -411,6 +444,7 @@ Olá! Gostaria de solicitar um agendamento.
 📅 Data desejada: ${data}
 
 🤝 Convênio: ${convenio}
+🪪 Carteirinha: ${textoCarteirinha}
 🩺 Especialidade: ${especialidade}
 
 📝 Observações:

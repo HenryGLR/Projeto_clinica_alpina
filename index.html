@@ -35,9 +35,7 @@
       <a href="./index.html#agendamento">Agendamento</a>
     </nav>
 
-    <a href="./index.html#agendamento" class="header-cta">
-      Agendar consulta
-    </a>
+    <a href="./index.html#agendamento" class="header-cta">Agendar consulta</a>
 
     <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menu">
       ☰
@@ -129,7 +127,7 @@
 
     <div class="quick-card">
       <h3>💬 Agendamento</h3>
-      <p>Mensagem automática com convênio, especialidade e dados do paciente.</p>
+      <p>Mensagem automática com convênio, carteirinha, especialidade e dados do paciente.</p>
     </div>
 
   </div>
@@ -168,7 +166,7 @@
       <h3>Seu atendimento começa aqui</h3>
 
       <p>
-        Escolha seu convênio, encontre a especialidade correta e solicite seu agendamento de forma rápida e organizada.
+        Escolha seu convênio, informe sua carteirinha e solicite seu agendamento de forma rápida e organizada.
       </p>
 
       <div class="sobre-mini-info">
@@ -288,7 +286,7 @@
       <h2>Escolha o convênio e veja apenas as opções disponíveis.</h2>
 
       <p>
-        O sistema filtra automaticamente as especialidades. Depois, a mensagem vai pronta para o WhatsApp da clínica.
+        O sistema filtra automaticamente as especialidades. Para convênios, a carteirinha é necessária para prosseguir.
       </p>
 
       <div class="check-list">
@@ -340,6 +338,15 @@
       <label for="convenio">Convênio</label>
       <select id="convenio" required></select>
 
+      <div id="carteirinhaBox">
+        <label for="carteirinha">Número da carteirinha</label>
+        <input 
+          type="text" 
+          id="carteirinha" 
+          placeholder="Digite o número da carteirinha"
+        >
+      </div>
+
       <div id="avisoConvenio" class="aviso"></div>
 
       <label for="especialidade">Especialidade</label>
@@ -382,10 +389,10 @@
 
     <div class="exames-cards">
       <div>❤️ Cardiológicos</div>
-      <div>🩻 Imagem</div>
+      <div>🏥 Imagem</div>
       <div>🧪 Laboratoriais</div>
       <div>👂 Audição</div>
-      <div>🫁 Pulmonares</div>
+      <div>💨 Pulmonares</div>
       <div>👁️ Oftalmológicos</div>
     </div>
 

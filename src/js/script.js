@@ -1,482 +1,1164 @@
+"use strict";
+
+const CAMINHO_IMAGENS = "src/assets";
+
 const especialidades = [
-  { nome:"Acupuntura", emoji:"🩺", resumo:"Técnica terapêutica usada para auxiliar no alívio de dores, tensões e equilíbrio do organismo." },
-  { nome:"Alergologia", emoji:"🤧", resumo:"Diagnóstico e acompanhamento de alergias respiratórias, alimentares e de pele." },
-  { nome:"Cardiologia", emoji:"❤️", resumo:"Cuida da saúde do coração, pressão arterial, arritmias e prevenção cardiovascular." },
-  { nome:"Cirurgião", emoji:"🏥", resumo:"Avaliação médica para procedimentos cirúrgicos, pequenas cirurgias e encaminhamentos." },
-  { nome:"Clínica Geral", emoji:"🩺", resumo:"Atendimento inicial, avaliação geral de saúde e encaminhamento para especialistas." },
-  { nome:"Dermatologia", emoji:"🧴", resumo:"Cuida da pele, cabelos, unhas, manchas, alergias, acne e alterações dermatológicas." },
-  { nome:"Endocrinologia", emoji:"⚖️", resumo:"Acompanha hormônios, diabetes, tireoide, metabolismo e alterações hormonais." },
-  { nome:"Fisioterapia", emoji:"💪", resumo:"Auxilia na recuperação de movimentos, dores musculares, lesões e reabilitação física." },
-  { nome:"Gastroenterologia", emoji:"🍎", resumo:"Cuida do sistema digestivo, estômago, intestino, refluxo e gastrite." },
-  { nome:"Ginecologia", emoji:"🌸", resumo:"Acompanha a saúde da mulher, prevenção, exames ginecológicos e orientações." },
-  { nome:"Neurologia", emoji:"🧠", resumo:"Avalia dores de cabeça, tonturas, alterações neurológicas, memória e sistema nervoso." },
-  { nome:"Nutricionista", emoji:"🥗", resumo:"Orienta alimentação, controle de peso, hábitos saudáveis e planos nutricionais." },
-  { nome:"Obstetrícia", emoji:"🤰", resumo:"Acompanha gestantes, pré-natal, saúde materna e desenvolvimento da gravidez." },
-  { nome:"Oftalmologia", emoji:"👁️", resumo:"Cuida da saúde dos olhos, visão, grau e alterações oculares." },
-  { nome:"Ortopedia", emoji:"🦴", resumo:"Avalia ossos, articulações, coluna, dores, fraturas e lesões." },
-  { nome:"Otorrinolaringologia", emoji:"👂", resumo:"Cuida de ouvido, nariz e garganta, sinusite, rouquidão e alterações auditivas." },
-  { nome:"Pediatria", emoji:"👶", resumo:"Atendimento infantil, crescimento, prevenção e cuidados com crianças." },
-  { nome:"Pneumologia", emoji:"💨", resumo:"Cuida da saúde respiratória, pulmões, falta de ar, tosse e doenças respiratórias." },
-  { nome:"Psicologia", emoji:"💬", resumo:"Acolhimento emocional, escuta profissional, desenvolvimento pessoal e saúde mental." },
-  { nome:"Psiquiatria", emoji:"😊", resumo:"Avaliação e tratamento médico de ansiedade, depressão e saúde mental." },
-  { nome:"Proctologia", emoji:"🏥", resumo:"Avalia alterações intestinais, hemorroidas, dores e sangramentos." },
-  { nome:"Urologia", emoji:"🚹", resumo:"Cuida do sistema urinário, próstata, rins, bexiga e saúde masculina." },
-  { nome:"Vascular", emoji:"🩸", resumo:"Acompanha circulação, varizes, dores nas pernas e vasos sanguíneos." }
+  {
+    nome: "Acupuntura",
+    imagem: `${CAMINHO_IMAGENS}/ACUPUNTURA.jpg`,
+    resumo: "Técnica terapêutica utilizada para auxiliar no alívio de dores, tensões e equilíbrio do organismo."
+  },
+  {
+    nome: "Alergologia",
+    imagem: `${CAMINHO_IMAGENS}/ALERGOLOGISTA.jpg`,
+    resumo: "Diagnóstico e acompanhamento de alergias respiratórias, alimentares e de pele."
+  },
+  {
+    nome: "Cardiologia",
+    imagem: `${CAMINHO_IMAGENS}/CARDIOLOGISTA.jpg`,
+    resumo: "Cuida da saúde do coração, pressão arterial, arritmias e prevenção cardiovascular."
+  },
+  {
+    nome: "Cirurgião",
+    imagem: `${CAMINHO_IMAGENS}/CIRURGIAO.jpg`,
+    resumo: "Avaliação médica para procedimentos cirúrgicos, pequenas cirurgias e encaminhamentos."
+  },
+  {
+    nome: "Clínica Geral",
+    imagem: `${CAMINHO_IMAGENS}/CLINICO.jpg`,
+    resumo: "Atendimento inicial, avaliação geral da saúde e encaminhamento para especialistas."
+  },
+  {
+    nome: "Dermatologia",
+    imagem: `${CAMINHO_IMAGENS}/DERMATO.jpg`,
+    resumo: "Cuida da pele, cabelos, unhas, manchas, alergias, acne e outras alterações dermatológicas."
+  },
+  {
+    nome: "Endocrinologia",
+    imagem: `${CAMINHO_IMAGENS}/ENDOCRINO.jpg`,
+    resumo: "Acompanha hormônios, diabetes, tireoide, metabolismo e alterações hormonais."
+  },
+  {
+    nome: "Fisioterapia",
+    imagem: `${CAMINHO_IMAGENS}/FISIOTERAPIA.jpg`,
+    resumo: "Auxilia na recuperação de movimentos, dores musculares, lesões e reabilitação física."
+  },
+  {
+    nome: "Gastroenterologia",
+    imagem: `${CAMINHO_IMAGENS}/GASTROO.jpg`,
+    resumo: "Cuida do sistema digestivo, estômago, intestino, refluxo, gastrite e outras alterações."
+  },
+  {
+    nome: "Ginecologia",
+    imagem: `${CAMINHO_IMAGENS}/GINECO.jpg`,
+    resumo: "Acompanha a saúde da mulher, prevenção, exames ginecológicos e orientações."
+  },
+  {
+    nome: "Neurologia",
+    imagem: `${CAMINHO_IMAGENS}/NEURO.jpg`,
+    resumo: "Avalia dores de cabeça, tonturas, memória, alterações neurológicas e sistema nervoso."
+  },
+  {
+    nome: "Nutricionista",
+    imagem: `${CAMINHO_IMAGENS}/NUTRI.jpg`,
+    resumo: "Orienta a alimentação, o controle de peso, hábitos saudáveis e planos nutricionais."
+  },
+  {
+    nome: "Obstetrícia",
+    imagem: `${CAMINHO_IMAGENS}/OBSTETRICIA.jpg`,
+    resumo: "Acompanha gestantes, pré-natal, saúde materna e desenvolvimento da gravidez."
+  },
+  {
+    nome: "Oftalmologia",
+    imagem: `${CAMINHO_IMAGENS}/OFTALMO.jpg`,
+    resumo: "Cuida da saúde dos olhos, visão, grau e diferentes alterações oculares."
+  },
+  {
+    nome: "Ortopedia",
+    imagem: `${CAMINHO_IMAGENS}/ORTOPEDISTA.jpg`,
+    resumo: "Avalia ossos, articulações, coluna, dores, fraturas e lesões musculoesqueléticas."
+  },
+  {
+    nome: "Otorrinolaringologia",
+    imagem: `${CAMINHO_IMAGENS}/OTORRINO.jpg`,
+    resumo: "Cuida de ouvido, nariz e garganta, sinusite, rouquidão e alterações auditivas."
+  },
+  {
+    nome: "Pediatria",
+    imagem: `${CAMINHO_IMAGENS}/PEDIATRAA.jpg`,
+    resumo: "Atendimento infantil, acompanhamento do crescimento, prevenção e cuidados com crianças."
+  },
+  {
+    nome: "Pneumologia",
+    imagem: `${CAMINHO_IMAGENS}/PNEUMOLOGISTA.jpg`,
+    resumo: "Cuida dos pulmões, falta de ar, tosse, asma e outras doenças respiratórias."
+  },
+  {
+    nome: "Psicologia",
+    imagem: `${CAMINHO_IMAGENS}/PSICOLOGIA.jpg`,
+    resumo: "Acolhimento emocional, escuta profissional, desenvolvimento pessoal e saúde mental."
+  },
+  {
+    nome: "Psiquiatria",
+    imagem: `${CAMINHO_IMAGENS}/PSIQUIATRIA.jpg`,
+    resumo: "Avaliação e tratamento médico de ansiedade, depressão e outras condições de saúde mental."
+  },
+  {
+    nome: "Proctologia",
+    imagem: `${CAMINHO_IMAGENS}/PROCTOLOGISTA.jpg`,
+    resumo: "Avalia alterações intestinais, hemorroidas, dores, sangramentos e outras condições."
+  },
+  {
+    nome: "Urologia",
+    imagem: `${CAMINHO_IMAGENS}/UROLOGISTA.jpg`,
+    resumo: "Cuida do sistema urinário, próstata, rins, bexiga e saúde masculina."
+  },
+  {
+    nome: "Vascular",
+    imagem: `${CAMINHO_IMAGENS}/VASCULAR.jpg`,
+    resumo: "Acompanha circulação, varizes, dores nas pernas e alterações dos vasos sanguíneos."
+  }
 ];
 
 const nomesEspecialidades = especialidades.map(item => item.nome);
 
 const convenios = {
-  "Particular": { observacao:"", especialidades: nomesEspecialidades, exames: [] },
+  "Particular": {
+    observacao: "",
+    especialidades: nomesEspecialidades,
+    exames: []
+  },
 
   "AMEPLAN": {
-    observacao:"AMEPLAN deve ser marcado diretamente no convênio. Para este convênio, a clínica não realiza o agendamento pelo site.",
+    observacao: "O agendamento da AMEPLAN deve ser realizado diretamente pelo convênio.",
     especialidades: [],
     exames: []
   },
 
   "AMIL": {
-    observacao:"Pedir a carteirinha. Nenhum exame é realizado.",
-    especialidades:["Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Gastroenterologia","Ginecologia","Neurologia","Oftalmologia","Otorrinolaringologia","Pediatria","Psiquiatria","Urologia"],
-    exames:[]
+    observacao: "A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psiquiatria",
+      "Urologia"
+    ],
+    exames: []
   },
 
   "BIO VIDA": {
-    observacao:"",
-    especialidades:["Clínica Geral","Pediatria"],
-    exames:["Sangue","Papanicolau","Eletrocardiograma","Medicação","Raio-X"]
+    observacao: "",
+    especialidades: [
+      "Clínica Geral",
+      "Pediatria"
+    ],
+    exames: [
+      "Exames de sangue",
+      "Papanicolau",
+      "Eletrocardiograma",
+      "Medicação",
+      "Raio-X"
+    ]
   },
 
   "BLUE SAÚDE": {
-    observacao:"",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Ginecologia","Psiquiatria","Urologia"],
-    exames:["Audiometria","Ecocardiograma","Eletrocardiograma","Eletroencefalograma","Holter 24h","Infiltração","Lavagem de Ouvido","MAPA 24h","Mapeamento de Retina","Nasofibroscopia","Otoneurológico","Prova de Função Pulmonar","Raio-X","Teste Ergométrico","Ultrassonografia","Tomografia","Mamografia","Densitometria"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Psiquiatria",
+      "Urologia"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Holter 24h",
+      "Infiltração",
+      "Lavagem de Ouvido",
+      "MAPA 24h",
+      "Mapeamento de Retina",
+      "Nasofibroscopia",
+      "Otoneurológico",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia",
+      "Tomografia",
+      "Mamografia",
+      "Densitometria"
+    ]
   },
 
   "BLUEMED / ALVORECER": {
-    observacao:"",
-    especialidades:["Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Gastroenterologia","Ginecologia","Neurologia","Ortopedia","Otorrinolaringologia","Pediatria","Urologia","Vascular"],
-    exames:["Audiometria","Eletrocardiograma","Medicação","Raio-X"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Eletrocardiograma",
+      "Medicação",
+      "Raio-X"
+    ]
   },
 
   "CENTRAL NACIONAL UNIMED": {
-    observacao:"",
-    especialidades:["Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Ginecologia","Neurologia","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Psicologia","Psiquiatria","Urologia","Vascular"],
-    exames:["Eletrocardiograma","Ultrassonografia"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Eletrocardiograma",
+      "Ultrassonografia"
+    ]
   },
 
   "ECOCONSUMIDOR": {
-    observacao:"Nenhum exame é realizado.",
-    especialidades:["Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Gastroenterologia","Ginecologia","Neurologia","Ortopedia","Otorrinolaringologia","Pediatria","Psiquiatria","Urologia","Vascular"],
-    exames:[]
+    observacao: "A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: []
   },
 
   "ECONOMUS": {
-    observacao:"Paciente deve trazer a guia.",
-    especialidades:["Cardiologia","Dermatologia","Endocrinologia","Gastroenterologia","Ginecologia","Neurologia","Otorrinolaringologia","Pediatria","Urologia","Vascular"],
-    exames:["Ecocardiograma"]
+    observacao: "O paciente deve apresentar a guia.",
+    especialidades: [
+      "Cardiologia",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Ecocardiograma"
+    ]
   },
 
   "GAMA SAÚDE / AMPLA": {
-    observacao:"",
-    especialidades:["Clínica Geral","Dermatologia","Ginecologia","Otorrinolaringologia","Pediatria","Vascular"],
-    exames:["Sangue","Anátomo Patológico"]
+    observacao: "",
+    especialidades: [
+      "Clínica Geral",
+      "Dermatologia",
+      "Ginecologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Vascular"
+    ],
+    exames: [
+      "Exames de sangue",
+      "Anatomopatológico"
+    ]
   },
 
   "GARANTIA SAÚDE": {
-    observacao:"Nenhum exame é realizado.",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Ginecologia","Ortopedia","Otorrinolaringologia","Pediatria"],
-    exames:[]
+    observacao: "A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Ginecologia",
+      "Ortopedia",
+      "Otorrinolaringologia",
+      "Pediatria"
+    ],
+    exames: []
   },
 
   "GEAP": {
-    observacao:"",
-    especialidades:["Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Ginecologia","Neurologia","Ortopedia","Oftalmologia","Pediatria","Psiquiatria","Urologia","Vascular"],
-    exames:["Audiometria","Ecocardiograma","Eletrocardiograma","Eletroencefalograma","Holter 24h","Lavagem de Ouvido","Prova de Função Pulmonar","Teste Ergométrico"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Pediatria",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Holter 24h",
+      "Lavagem de Ouvido",
+      "Prova de Função Pulmonar",
+      "Teste Ergométrico"
+    ]
   },
 
   "MEDSELECT": {
-    observacao:"",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Ginecologia","Neurologia","Nutricionista","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Psicologia","Psiquiatria","Vascular"],
-    exames:["Audiometria","Ecocardiograma","Eletrocardiograma","Eletroencefalograma","Holter 24h","MAPA 24h","Mapeamento Cerebral","Mapeamento de Retina","Nasofibroscopia","Otoneurológico","Prova de Função Pulmonar","Raio-X","Ultrassonografia","Tomografia","Densitometria Óssea","Mamografia"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Holter 24h",
+      "MAPA 24h",
+      "Mapeamento Cerebral",
+      "Mapeamento de Retina",
+      "Nasofibroscopia",
+      "Otoneurológico",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Ultrassonografia",
+      "Tomografia",
+      "Densitometria Óssea",
+      "Mamografia"
+    ]
   },
 
   "MEDSENIOR": {
-    observacao:"",
-    especialidades:["Cardiologia","Dermatologia","Otorrinolaringologia"],
-    exames:["Ecocardiograma","Eletrocardiograma","Ultrassonografia","Tomografia","Mamografia","Densitometria"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Dermatologia",
+      "Otorrinolaringologia"
+    ],
+    exames: [
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Ultrassonografia",
+      "Tomografia",
+      "Mamografia",
+      "Densitometria"
+    ]
   },
 
   "MEDSERVICE": {
-    observacao:"",
-    especialidades:["Alergologia","Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Ginecologia","Neurologia","Nutricionista","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Psicologia","Psiquiatria","Urologia","Vascular"],
-    exames:["Sangue","Audiometria","Papanicolau","Ecocardiograma","Eletrocardiograma","Eletroencefalograma","Gesso","Inalação","Lavagem de Ouvido","Mapeamento de Retina","Medicação","Prova de Função Pulmonar","Raio-X","Teste Ergométrico","Ultrassonografia","Tomografia","Densitometria","Mamografia"]
+    observacao: "",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Exames de sangue",
+      "Audiometria",
+      "Papanicolau",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Gesso",
+      "Inalação",
+      "Lavagem de Ouvido",
+      "Mapeamento de Retina",
+      "Medicação",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia",
+      "Tomografia",
+      "Densitometria",
+      "Mamografia"
+    ]
   },
 
   "NEW LEADER": {
-    observacao:"Paciente deve trazer autorização.",
-    especialidades:["Alergologia","Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Fisioterapia","Gastroenterologia","Ginecologia","Neurologia","Nutricionista","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Psicologia","Psiquiatria","Urologia","Vascular"],
-    exames:["Audiometria","Ecocardiograma","Eletrocardiograma","Eletroencefalograma","Holter 24h","Gesso","Inalação","Lavagem de Ouvido","MAPA 24h","Otoneurológico","Prova de Função Pulmonar","Raio-X","Teste Ergométrico","Ultrassonografia"]
+    observacao: "O paciente deve apresentar autorização.",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "Holter 24h",
+      "Gesso",
+      "Inalação",
+      "Lavagem de Ouvido",
+      "MAPA 24h",
+      "Otoneurológico",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia"
+    ]
   },
 
   "OMINT": {
-    observacao:"Necessário autorização.",
-    especialidades:["Alergologia","Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Ginecologia","Neurologia","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Proctologia","Psicologia","Psiquiatria","Urologia","Vascular"],
-    exames:["Audiometria","Ecocardiograma","Eletrocardiograma","Holter 24h","Gesso","Inalação","Infiltração","Lavagem de Ouvido","Mapeamento Cerebral","Medicação","Nasofibroscopia","Otoneurológico","Raio-X","Teste Ergométrico","Ultrassonografia"]
+    observacao: "É necessário apresentar autorização.",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Proctologia",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Holter 24h",
+      "Gesso",
+      "Inalação",
+      "Infiltração",
+      "Lavagem de Ouvido",
+      "Mapeamento Cerebral",
+      "Medicação",
+      "Nasofibroscopia",
+      "Otoneurológico",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia"
+    ]
   },
 
   "PLENA SAÚDE": {
-    observacao:"Nenhum exame é realizado.",
-    especialidades:["Alergologia","Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Gastroenterologia","Ginecologia","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Psiquiatria","Urologia","Vascular"],
-    exames:[]
+    observacao: "A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: []
   },
 
   "PORTO ITAÚ": {
-    observacao:"",
-    especialidades:["Alergologia","Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Ginecologia","Neurologia","Nutricionista","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Pneumologia","Psicologia","Psiquiatria","Urologia","Vascular"],
-    exames:["Audiometria","Eletrocardiograma","Gesso","Lavagem de Ouvido","Mapeamento Cerebral","Mapeamento de Retina","Medicação","Nasofibroscopia","Otoneurológico","Prova de Função Pulmonar","Raio-X","Ultrassonografia"]
+    observacao: "",
+    especialidades: [
+      "Alergologia",
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Pneumologia",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Eletrocardiograma",
+      "Gesso",
+      "Lavagem de Ouvido",
+      "Mapeamento Cerebral",
+      "Mapeamento de Retina",
+      "Medicação",
+      "Nasofibroscopia",
+      "Otoneurológico",
+      "Prova de Função Pulmonar",
+      "Raio-X",
+      "Ultrassonografia"
+    ]
   },
 
   "PREVENT SENIOR": {
-    observacao:"Nenhum exame é realizado.",
-    especialidades:["Psiquiatria","Otorrinolaringologia"],
-    exames:[]
+    observacao: "A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Psiquiatria",
+      "Otorrinolaringologia"
+    ],
+    exames: []
   },
 
   "PROASA": {
-    observacao:"",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Nutricionista","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Psicologia","Psiquiatria","Urologia"],
-    exames:["Audiometria","Biópsia","Ecocardiograma","Eletrocardiograma","Holter 24h","MAPA 24h","Nasofibroscopia","Otoneurológico","Prova de Função Pulmonar","Teste Ergométrico"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Urologia"
+    ],
+    exames: [
+      "Audiometria",
+      "Biópsia",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Holter 24h",
+      "MAPA 24h",
+      "Nasofibroscopia",
+      "Otoneurológico",
+      "Prova de Função Pulmonar",
+      "Teste Ergométrico"
+    ]
   },
 
   "SANTA CASA DE MAUÁ": {
-    observacao:"",
-    especialidades:["Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Gastroenterologia","Ginecologia","Neurologia","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Urologia","Vascular"],
-    exames:["Audiometria","Ecocardiograma","Eletrocardiograma","Mapeamento de Retina","Otoneurológico","Raio-X","Teste Ergométrico","Ultrassonografia"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Neurologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Audiometria",
+      "Ecocardiograma",
+      "Eletrocardiograma",
+      "Mapeamento de Retina",
+      "Otoneurológico",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia"
+    ]
   },
 
   "SÃO CRISTÓVÃO": {
-    observacao:"",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Ginecologia","Pediatria","Vascular"],
-    exames:["Eletrocardiograma"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Pediatria",
+      "Vascular"
+    ],
+    exames: [
+      "Eletrocardiograma"
+    ]
   },
 
   "SÃO MIGUEL": {
-    observacao:"Pegamos apenas Clínico Geral e Cardiologia.",
-    especialidades:["Cardiologia","Clínica Geral"],
-    exames:["Eletrocardiograma","Raio-X"]
+    observacao: "Atendimento disponível somente para Clínica Geral e Cardiologia.",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral"
+    ],
+    exames: [
+      "Eletrocardiograma",
+      "Raio-X"
+    ]
   },
 
   "SEGUROS UNIMED": {
-    observacao:"Nenhum exame é realizado.",
-    especialidades:["Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Ginecologia","Neurologia","Nutricionista","Pediatria","Psiquiatria","Vascular"],
-    exames:[]
+    observacao: "A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Ginecologia",
+      "Neurologia",
+      "Nutricionista",
+      "Pediatria",
+      "Psiquiatria",
+      "Vascular"
+    ],
+    exames: []
   },
 
   "SISTEMAS": {
-    observacao:"Paciente deve trazer a guia. Nenhum exame é realizado.",
-    especialidades:["Endocrinologia","Gastroenterologia","Neurologia","Otorrinolaringologia"],
-    exames:[]
+    observacao: "O paciente deve apresentar a guia. A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Neurologia",
+      "Otorrinolaringologia"
+    ],
+    exames: []
   },
 
   "SUL AMÉRICA": {
-    observacao:"",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Ginecologia","Ortopedia","Otorrinolaringologia","Pediatria","Psicologia","Psiquiatria","Vascular"],
-    exames:["Sangue","Papanicolau","Eletrocardiograma","Holter 24h","Gesso","Inalação","MAPA 24h","Mapeamento de Retina","Medicação","Prova de Função Pulmonar","Teste Ergométrico"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Ginecologia",
+      "Ortopedia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia",
+      "Psiquiatria",
+      "Vascular"
+    ],
+    exames: [
+      "Exames de sangue",
+      "Papanicolau",
+      "Eletrocardiograma",
+      "Holter 24h",
+      "Gesso",
+      "Inalação",
+      "MAPA 24h",
+      "Mapeamento de Retina",
+      "Medicação",
+      "Prova de Função Pulmonar",
+      "Teste Ergométrico"
+    ]
   },
 
   "TEMPO ASSIST": {
-    observacao:"Paciente deve trazer autorização. Nenhum exame é realizado.",
-    especialidades:["Cardiologia","Cirurgião","Clínica Geral","Dermatologia","Endocrinologia","Gastroenterologia","Ginecologia","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Urologia","Vascular"],
-    exames:[]
+    observacao: "O paciente deve apresentar autorização. A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Cardiologia",
+      "Cirurgião",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: []
   },
 
   "TOTAL MEDCARE": {
-    observacao:"",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Fisioterapia","Gastroenterologia","Neurologia","Nutricionista","Ortopedia","Oftalmologia","Otorrinolaringologia","Urologia"],
-    exames:["Eletrocardiograma","Eletroencefalograma","MAPA 24h","Otoneurológico","Raio-X","Teste Ergométrico","Ultrassonografia","Tomografia"]
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Neurologia",
+      "Nutricionista",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Urologia"
+    ],
+    exames: [
+      "Eletrocardiograma",
+      "Eletroencefalograma",
+      "MAPA 24h",
+      "Otoneurológico",
+      "Raio-X",
+      "Teste Ergométrico",
+      "Ultrassonografia",
+      "Tomografia"
+    ]
   },
 
   "UBB": {
-    observacao:"Consulta R$90. Nutrição e Psicologia R$50. Nenhum exame é realizado.",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Endocrinologia","Ginecologia","Nutricionista","Otorrinolaringologia","Pediatria","Psicologia"],
-    exames:[]
+    observacao: "Consulta médica: R$ 90. Nutrição e Psicologia: R$ 50. A clínica não realiza exames por este convênio.",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Ginecologia",
+      "Nutricionista",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psicologia"
+    ],
+    exames: []
   },
 
   "UNIHOSP": {
-    observacao:"",
-    especialidades:["Clínica Geral","Pediatria"],
-    exames:["Sangue","Papanicolau","Eletrocardiograma","Inalação","Medicação","Raio-X"]
+    observacao: "",
+    especialidades: [
+      "Clínica Geral",
+      "Pediatria"
+    ],
+    exames: [
+      "Exames de sangue",
+      "Papanicolau",
+      "Eletrocardiograma",
+      "Inalação",
+      "Medicação",
+      "Raio-X"
+    ]
   },
 
-  "VIVEST": {
-    observacao:"",
-    especialidades:["Cardiologia","Clínica Geral","Dermatologia","Fisioterapia","Gastroenterologia","Ginecologia","Ortopedia","Oftalmologia","Otorrinolaringologia","Pediatria","Urologia","Vascular"],
-    exames:["Eletrocardiograma","Inalação","Lavagem de Ouvido","Medicação","Ultrassonografia"]
+  "VIVEST / CESP": {
+    observacao: "",
+    especialidades: [
+      "Cardiologia",
+      "Clínica Geral",
+      "Dermatologia",
+      "Fisioterapia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Urologia",
+      "Vascular"
+    ],
+    exames: [
+      "Eletrocardiograma",
+      "Inalação",
+      "Lavagem de Ouvido",
+      "Medicação",
+      "Ultrassonografia"
+    ]
   }
 };
 
 const listaEspecialidades = document.getElementById("listaEspecialidades");
-const buscaEspecialidade = document.getElementById("buscarEspecialidade");
-
-const convenioSelect = document.getElementById("convenio");
-const carteirinhaBox = document.getElementById("carteirinhaBox");
-const carteirinhaInput = document.getElementById("carteirinha");
-const especialidadeSelect = document.getElementById("especialidade");
-
+const buscarEspecialidade = document.getElementById("buscarEspecialidade");
 const consultaConvenio = document.getElementById("consultaConvenio");
 const resultadoEspecialidades = document.getElementById("resultadoEspecialidades");
 const resultadoExames = document.getElementById("resultadoExames");
 const resultadoObservacao = document.getElementById("resultadoObservacao");
-const avisoConvenio = document.getElementById("avisoConvenio");
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileNav = document.getElementById("mobileNav");
+
+function normalizarTexto(texto) {
+  return String(texto)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+function criarOpcao(valor, texto = valor) {
+  const opcao = document.createElement("option");
+
+  opcao.value = valor;
+  opcao.textContent = texto;
+
+  return opcao;
+}
+
+function criarChip(texto, classeAdicional = "") {
+  const chip = document.createElement("span");
+
+  chip.className = `chip ${classeAdicional}`.trim();
+  chip.textContent = texto;
+
+  return chip;
+}
+
+function ordenarConvenios() {
+  const nomes = Object.keys(convenios)
+    .filter(nome => nome !== "Particular")
+    .sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+  return ["Particular", ...nomes];
+}
+
+function mostrarObservacao(mensagem = "") {
+  if (!resultadoObservacao) return;
+
+  if (mensagem) {
+    resultadoObservacao.textContent = mensagem;
+    resultadoObservacao.style.display = "block";
+    return;
+  }
+
+  resultadoObservacao.textContent = "";
+  resultadoObservacao.style.display = "none";
+}
 
 function renderizarEspecialidades(lista) {
   if (!listaEspecialidades) return;
 
   listaEspecialidades.innerHTML = "";
 
-  lista.forEach(item => {
-    const card = document.createElement("div");
-    card.classList.add("card");
+  if (!lista.length) {
+    const mensagem = document.createElement("div");
 
-    card.innerHTML = `
-      <div class="emoji">${item.emoji}</div>
-      <h3>${item.nome}</h3>
-      <p>${item.resumo}</p>
-      <a href="#agendamento">Agendar consulta →</a>
-    `;
+    mensagem.className = "nenhum-resultado";
+    mensagem.textContent = "Nenhuma especialidade encontrada.";
 
-    listaEspecialidades.appendChild(card);
-  });
-}
-
-function preencherConvenios() {
-  const nomesOrdenados = Object.keys(convenios).sort((a, b) =>
-    a.localeCompare(b, "pt-BR")
-  );
-
-  nomesOrdenados.forEach(nome => {
-    if (convenioSelect) {
-      const option = document.createElement("option");
-      option.value = nome;
-      option.textContent = nome;
-      convenioSelect.appendChild(option);
-    }
-
-    if (consultaConvenio) {
-      const option2 = document.createElement("option");
-      option2.value = nome;
-      option2.textContent = nome;
-      consultaConvenio.appendChild(option2);
-    }
-  });
-}
-
-function atualizarCarteirinha() {
-  if (!convenioSelect || !carteirinhaBox || !carteirinhaInput) return;
-
-  if (convenioSelect.value === "Particular") {
-    carteirinhaBox.style.display = "none";
-    carteirinhaInput.required = false;
-    carteirinhaInput.value = "";
-  } else {
-    carteirinhaBox.style.display = "block";
-    carteirinhaInput.required = true;
-  }
-}
-
-function atualizarEspecialidadesAgendamento() {
-  if (!convenioSelect || !especialidadeSelect) return;
-
-  const convenioAtual = convenioSelect.value;
-  const dados = convenios[convenioAtual];
-
-  if (!dados) return;
-
-  especialidadeSelect.innerHTML = "";
-
-  atualizarCarteirinha();
-
-  if (dados.especialidades.length === 0) {
-    const option = document.createElement("option");
-    option.value = "";
-    option.textContent = "Agendamento não disponível pelo site";
-    especialidadeSelect.appendChild(option);
-    especialidadeSelect.disabled = true;
-
-    if (carteirinhaBox && carteirinhaInput) {
-      carteirinhaBox.style.display = "none";
-      carteirinhaInput.required = false;
-      carteirinhaInput.value = "";
-    }
-
-    if (avisoConvenio) {
-      avisoConvenio.style.display = "block";
-      avisoConvenio.textContent = dados.observacao;
-    }
+    listaEspecialidades.appendChild(mensagem);
 
     return;
   }
 
-  especialidadeSelect.disabled = false;
+  const fragmento = document.createDocumentFragment();
 
-  dados.especialidades.forEach(item => {
-    const option = document.createElement("option");
-    option.value = item;
-    option.textContent = item;
-    especialidadeSelect.appendChild(option);
+  lista.forEach(item => {
+    const card = document.createElement("article");
+
+    card.className = "card especialidade-card";
+
+    const linkAgendamento =
+      `./agendamento.html?especialidade=${encodeURIComponent(item.nome)}`;
+
+    card.innerHTML = `
+      <div class="especialidade-imagem-box">
+        <img
+          src="${item.imagem}"
+          alt="Especialidade de ${item.nome}"
+          class="especialidade-imagem"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="especialidade-conteudo">
+        <h3>${item.nome}</h3>
+
+        <p>${item.resumo}</p>
+
+        <a
+          href="${linkAgendamento}"
+          class="agendar-especialidade"
+          aria-label="Agendar atendimento em ${item.nome}"
+        >
+          Agendar consulta →
+        </a>
+      </div>
+    `;
+
+    const imagem = card.querySelector(".especialidade-imagem");
+
+    imagem.addEventListener("error", () => {
+      imagem.onerror = null;
+      imagem.src = `${CAMINHO_IMAGENS}/logo.png`;
+      imagem.alt = "Logo da Clínica Médica Vila Alpina";
+      imagem.classList.add("imagem-fallback");
+    });
+
+    fragmento.appendChild(card);
   });
 
-  if (avisoConvenio) {
-    if (dados.observacao) {
-      avisoConvenio.style.display = "block";
-      avisoConvenio.textContent = dados.observacao;
-    } else {
-      avisoConvenio.style.display = "none";
-      avisoConvenio.textContent = "";
-    }
+  listaEspecialidades.appendChild(fragmento);
+}
+
+function filtrarEspecialidades() {
+  if (!buscarEspecialidade) return;
+
+  const termo = normalizarTexto(buscarEspecialidade.value);
+
+  if (!termo) {
+    renderizarEspecialidades(especialidades);
+    return;
   }
+
+  const resultado = especialidades.filter(item => {
+    const nome = normalizarTexto(item.nome);
+    const resumo = normalizarTexto(item.resumo);
+
+    return nome.includes(termo) || resumo.includes(termo);
+  });
+
+  renderizarEspecialidades(resultado);
+}
+
+function preencherConsultaConvenios() {
+  if (!consultaConvenio) return;
+
+  consultaConvenio.innerHTML = "";
+
+  const opcaoInicial = criarOpcao("", "Selecione um convênio");
+
+  opcaoInicial.disabled = true;
+  opcaoInicial.selected = true;
+
+  consultaConvenio.appendChild(opcaoInicial);
+
+  ordenarConvenios().forEach(nome => {
+    consultaConvenio.appendChild(criarOpcao(nome));
+  });
+}
+
+function limparResultadoConvenio() {
+  if (resultadoEspecialidades) {
+    resultadoEspecialidades.innerHTML = "";
+
+    resultadoEspecialidades.appendChild(
+      criarChip("Selecione um convênio para consultar", "vazio")
+    );
+  }
+
+  if (resultadoExames) {
+    resultadoExames.innerHTML = "";
+
+    resultadoExames.appendChild(
+      criarChip("Selecione um convênio para consultar", "vazio")
+    );
+  }
+
+  mostrarObservacao("");
 }
 
 function atualizarConsultaConvenio() {
-  if (!consultaConvenio || !resultadoEspecialidades || !resultadoExames) return;
+  if (
+    !consultaConvenio ||
+    !resultadoEspecialidades ||
+    !resultadoExames
+  ) {
+    return;
+  }
 
-  const convenioAtual = consultaConvenio.value;
-  const dados = convenios[convenioAtual];
-
-  if (!dados) return;
+  const convenioSelecionado = consultaConvenio.value;
+  const dadosConvenio = convenios[convenioSelecionado];
 
   resultadoEspecialidades.innerHTML = "";
   resultadoExames.innerHTML = "";
 
-  if (dados.especialidades.length > 0) {
-    dados.especialidades.forEach(item => {
-      const chip = document.createElement("span");
-      chip.classList.add("chip");
-      chip.textContent = item;
-      resultadoEspecialidades.appendChild(chip);
+  if (!dadosConvenio) {
+    limparResultadoConvenio();
+    return;
+  }
+
+  if (dadosConvenio.especialidades.length) {
+    dadosConvenio.especialidades.forEach(especialidade => {
+      resultadoEspecialidades.appendChild(
+        criarChip(especialidade)
+      );
     });
   } else {
-    const chip = document.createElement("span");
-    chip.classList.add("chip", "vazio");
-    chip.textContent = "Agendamento direto pelo convênio";
-    resultadoEspecialidades.appendChild(chip);
-  }
-
-  if (dados.exames.length > 0) {
-    dados.exames.forEach(item => {
-      const chip = document.createElement("span");
-      chip.classList.add("chip", "exame");
-      chip.textContent = item;
-      resultadoExames.appendChild(chip);
-    });
-  } else {
-    const chip = document.createElement("span");
-    chip.classList.add("chip", "vazio");
-    chip.textContent = "Nenhum exame disponível";
-    resultadoExames.appendChild(chip);
-  }
-
-  if (resultadoObservacao) {
-    if (dados.observacao) {
-      resultadoObservacao.style.display = "block";
-      resultadoObservacao.textContent = dados.observacao;
-    } else {
-      resultadoObservacao.style.display = "none";
-      resultadoObservacao.textContent = "";
-    }
-  }
-}
-
-if (buscaEspecialidade) {
-  buscaEspecialidade.addEventListener("input", () => {
-    const termo = buscaEspecialidade.value.toLowerCase();
-
-    const filtrado = especialidades.filter(item =>
-      item.nome.toLowerCase().includes(termo)
+    resultadoEspecialidades.appendChild(
+      criarChip("Agendamento direto pelo convênio", "vazio")
     );
+  }
 
-    renderizarEspecialidades(filtrado);
-  });
-}
-
-if (convenioSelect) {
-  convenioSelect.addEventListener("change", atualizarEspecialidadesAgendamento);
-}
-
-if (consultaConvenio) {
-  consultaConvenio.addEventListener("change", atualizarConsultaConvenio);
-}
-
-const form = document.getElementById("formAgendamento");
-
-if (form) {
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    if (especialidadeSelect.disabled) {
-      alert("Este convênio deve ser marcado diretamente no convênio.");
-      return;
-    }
-
-    const nome = document.getElementById("nome").value;
-    const telefone = document.getElementById("telefone").value;
-    const data = document.getElementById("data").value;
-    const convenio = convenioSelect.value;
-    const carteirinha = carteirinhaInput ? carteirinhaInput.value.trim() : "";
-    const especialidade = especialidadeSelect.value;
-    const observacao = document.getElementById("observacao").value;
-
-    if (convenio !== "Particular" && !carteirinha) {
-      alert("Por favor, informe o número da carteirinha do convênio.");
-      return;
-    }
-
-    const textoCarteirinha = convenio === "Particular"
-      ? "Não se aplica"
-      : carteirinha;
-
-    const mensagem = `
-Olá! Gostaria de solicitar um agendamento.
-
-👤 Nome: ${nome}
-📞 Telefone: ${telefone}
-📅 Data desejada: ${data}
-
-🤝 Convênio: ${convenio}
-🪪 Carteirinha: ${textoCarteirinha}
-🩺 Especialidade: ${especialidade}
-
-📝 Observações:
-${observacao || "Nenhuma"}
-`;
-
-    const numero = "5511959701266";
-    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-    window.open(link, "_blank");
-  });
-}
-
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const mobileNav = document.getElementById("mobileNav");
-
-if (mobileMenuBtn && mobileNav) {
-  mobileMenuBtn.addEventListener("click", () => {
-    mobileNav.classList.toggle("active");
-    mobileMenuBtn.textContent = mobileNav.classList.contains("active") ? "×" : "☰";
-  });
-
-  mobileNav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      mobileNav.classList.remove("active");
-      mobileMenuBtn.textContent = "☰";
+  if (dadosConvenio.exames.length) {
+    dadosConvenio.exames.forEach(exame => {
+      resultadoExames.appendChild(
+        criarChip(exame, "exame")
+      );
     });
+  } else {
+    resultadoExames.appendChild(
+      criarChip("Nenhum exame disponível pelo convênio", "vazio")
+    );
+  }
+
+  mostrarObservacao(dadosConvenio.observacao);
+}
+
+function alternarMenuMobile() {
+  if (!mobileMenuBtn || !mobileNav) return;
+
+  const menuAberto = mobileNav.classList.toggle("active");
+
+  mobileMenuBtn.textContent = menuAberto ? "×" : "☰";
+
+  mobileMenuBtn.setAttribute(
+    "aria-expanded",
+    String(menuAberto)
+  );
+
+  mobileMenuBtn.setAttribute(
+    "aria-label",
+    menuAberto ? "Fechar menu" : "Abrir menu"
+  );
+}
+
+function fecharMenuMobile() {
+  if (!mobileMenuBtn || !mobileNav) return;
+
+  mobileNav.classList.remove("active");
+  mobileMenuBtn.textContent = "☰";
+  mobileMenuBtn.setAttribute("aria-expanded", "false");
+  mobileMenuBtn.setAttribute("aria-label", "Abrir menu");
+}
+
+function adicionarEventos() {
+  buscarEspecialidade?.addEventListener(
+    "input",
+    filtrarEspecialidades
+  );
+
+  consultaConvenio?.addEventListener(
+    "change",
+    atualizarConsultaConvenio
+  );
+
+  mobileMenuBtn?.addEventListener(
+    "click",
+    alternarMenuMobile
+  );
+
+  mobileNav?.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", fecharMenuMobile);
+  });
+
+  document.addEventListener("keydown", evento => {
+    if (evento.key === "Escape") {
+      fecharMenuMobile();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1100) {
+      fecharMenuMobile();
+    }
   });
 }
 
-renderizarEspecialidades(especialidades);
-preencherConvenios();
+function inicializarPaginaInicial() {
+  renderizarEspecialidades(especialidades);
+  preencherConsultaConvenios();
+  limparResultadoConvenio();
+  adicionarEventos();
+}
 
-if (convenioSelect) atualizarEspecialidadesAgendamento();
-if (consultaConvenio) atualizarConsultaConvenio();
+document.addEventListener(
+  "DOMContentLoaded",
+  inicializarPaginaInicial
+);

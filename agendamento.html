@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Agende sua consulta na Clínica Médica Vila Alpina pelo aplicativo, formulário online ou telefone."
+  >
+
+  <meta name="theme-color" content="#0f172a">
+
+  <title>Agendamento | Clínica Médica Vila Alpina</title>
+
+  <link rel="icon" href="src/assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="src/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body class="agendamento-page">
+
+  <header class="header">
+    <div class="container header-content">
+
+      <a
+        href="./index.html#inicio"
+        class="logo-area"
+        aria-label="Página inicial da Clínica Médica Vila Alpina"
+      >
+        <img
+          src="src/assets/logo.png"
+          alt="Clínica Médica Vila Alpina"
+          class="logo"
+        >
+
+        <div class="logo-text">
+          <h2>Clínica Médica Vila Alpina</h2>
+          <p>Saúde completa em um só lugar</p>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="./index.html#inicio">Início</a>
+        <a href="./index.html#sobre">Sobre</a>
+        <a href="./index.html#especialidades">Especialidades</a>
+        <a href="./exames.html">Exames</a>
+        <a href="./index.html#convenios">Convênios</a>
+        <a href="./agendamento.html">Agendamento</a>
+      </nav>
+
+      <a href="#formulario-agendamento" class="header-cta">
+        Agendar consulta
+      </a>
+
+      <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+        ☰
+      </button>
+
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobileNav"
+      aria-label="Navegação para celular"
+    >
+      <a href="./index.html#inicio">Início</a>
+      <a href="./index.html#sobre">Sobre</a>
+      <a href="./index.html#especialidades">Especialidades</a>
+      <a href="./exames.html">Exames</a>
+      <a href="./index.html#convenios">Convênios</a>
+      <a href="./agendamento.html">Agendamento</a>
+      <a href="#formulario-agendamento">Preencher formulário</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="agendamento-hero">
+      <div class="container agendamento-hero-grid">
+
+        <div class="agendamento-hero-content">
+
+          <span class="agendamento-badge">
+            Atendimento rápido e organizado
+          </span>
+
+          <h1>
+            Escolha a melhor forma de solicitar seu atendimento.
+          </h1>
+
+          <p>
+            Utilize o aplicativo oficial da clínica, preencha o formulário para enviar sua solicitação pelo WhatsApp ou ligue diretamente para nossa equipe.
+          </p>
+
+          <div class="agendamento-hero-actions">
+
+            <a href="#formulario-agendamento" class="btn-primary">
+              Preencher formulário
+            </a>
+
+            <a href="#baixar-aplicativo" class="btn-secondary">
+              Baixar aplicativo
+            </a>
+
+          </div>
+
+          <div class="agendamento-beneficios">
+
+            <div>
+              <span>01</span>
+              <p>Informe seus dados</p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <p>Escolha o convênio</p>
+            </div>
+
+            <div>
+              <span>03</span>
+              <p>Envie para a recepção</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="agendamento-hero-panel">
+
+          <div class="agendamento-hero-panel-top">
+
+            <img
+              src="src/assets/boneco.png"
+              alt="Assistente da Clínica Médica Vila Alpina"
+            >
+
+            <div>
+              <span>Central de agendamento</span>
+              <h2>Como prefere ser atendido?</h2>
+            </div>
+
+          </div>
+
+          <div class="agendamento-opcoes-rapidas">
+
+            <a
+              href="#formulario-agendamento"
+              class="agendamento-opcao agendamento-opcao-whatsapp"
+            >
+              <span class="agendamento-opcao-icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2a9.6 9.6 0 0 0-8.33 14.37L2.4 21.6l5.36-1.24A9.6 9.6 0 1 0 12 2Zm0 17.2a7.55 7.55 0 0 1-3.85-1.05l-.28-.16-3.18.74.76-3.09-.18-.3A7.6 7.6 0 1 1 12 19.2Zm4.18-5.68c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12-.15.23-.59.75-.72.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.14-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.34-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.51-1.23-.7-1.69-.18-.44-.37-.38-.51-.39h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91 0 1.13.82 2.22.94 2.37.12.15 1.62 2.47 3.92 3.46.55.24.98.38 1.31.49.55.17 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.16-.43-.28Z"/>
+                </svg>
+              </span>
+
+              <span>
+                <strong>WhatsApp</strong>
+                <small>Preencher antes de enviar</small>
+              </span>
+
+              <span class="agendamento-opcao-seta">→</span>
+            </a>
+
+            <a
+              href="tel:+551129171717"
+              class="agendamento-opcao agendamento-opcao-telefone"
+            >
+              <span class="agendamento-opcao-icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.62 10.79a15.43 15.43 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.5 11.5 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.5 11.5 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2Z"/>
+                </svg>
+              </span>
+
+              <span>
+                <strong>Telefone</strong>
+                <small>2917-1717</small>
+              </span>
+
+              <span class="agendamento-opcao-seta">→</span>
+            </a>
+
+            <a
+              href="#baixar-aplicativo"
+              class="agendamento-opcao agendamento-opcao-aplicativo"
+            >
+              <span class="agendamento-opcao-icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm0 3v14h10V5H7Zm4 11h2v2h-2v-2Z"/>
+                </svg>
+              </span>
+
+              <span>
+                <strong>Aplicativo</strong>
+                <small>Baixar e instalar</small>
+              </span>
+
+              <span class="agendamento-opcao-seta">→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="agendamento-canais">
+      <div class="container">
+
+        <div class="section-title">
+
+          <span>Opções de atendimento</span>
+
+          <h2>
+            Solicite seu atendimento da forma mais confortável.
+          </h2>
+
+          <p>
+            Escolha o aplicativo, preencha o formulário para enviar pelo WhatsApp ou ligue para a recepção.
+          </p>
+
+        </div>
+
+        <div class="agendamento-canais-grid">
+
+          <article class="agendamento-canal-card">
+
+            <div class="agendamento-canal-numero">01</div>
+
+            <div class="agendamento-canal-icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm0 3v14h10V5H7Zm4 11h2v2h-2v-2Z"/>
+              </svg>
+            </div>
+
+            <h3>Aplicativo da clínica</h3>
+
+            <p>
+              Tenha a Clínica Médica Vila Alpina no seu celular e acesse os serviços com mais praticidade.
+            </p>
+
+            <a href="#baixar-aplicativo">
+              Ver opções de instalação
+            </a>
+
+          </article>
+
+          <article class="agendamento-canal-card agendamento-canal-destaque">
+
+            <div class="agendamento-canal-numero">02</div>
+
+            <div class="agendamento-canal-icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a9.6 9.6 0 0 0-8.33 14.37L2.4 21.6l5.36-1.24A9.6 9.6 0 1 0 12 2Zm0 17.2a7.55 7.55 0 0 1-3.85-1.05l-.28-.16-3.18.74.76-3.09-.18-.3A7.6 7.6 0 1 1 12 19.2Zm4.18-5.68c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12-.15.23-.59.75-.72.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.14-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.34-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.51-1.23-.7-1.69-.18-.44-.37-.38-.51-.39h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91 0 1.13.82 2.22.94 2.37.12.15 1.62 2.47 3.92 3.46.55.24.98.38 1.31.49.55.17 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.16-.43-.28Z"/>
+              </svg>
+            </div>
+
+            <span class="agendamento-canal-etiqueta">
+              Mais utilizado
+            </span>
+
+            <h3>Solicitação pelo WhatsApp</h3>
+
+            <p>
+              Preencha seus dados para que o WhatsApp seja aberto com todas as informações organizadas para a recepção.
+            </p>
+
+            <a href="#formulario-agendamento">
+              Preencher formulário
+            </a>
+
+          </article>
+
+          <article class="agendamento-canal-card">
+
+            <div class="agendamento-canal-numero">03</div>
+
+            <div class="agendamento-canal-icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.62 10.79a15.43 15.43 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.5 11.5 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.5 11.5 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2Z"/>
+              </svg>
+            </div>
+
+            <h3>Atendimento por telefone</h3>
+
+            <p>
+              Ligue diretamente para a clínica durante o horário de funcionamento e fale com nossa equipe.
+            </p>
+
+            <a href="tel:+551129171717">
+              Ligar para 2917-1717
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="aplicativo-section" id="baixar-aplicativo">
+      <div class="container aplicativo-container">
+
+        <div class="aplicativo-introducao">
+
+          <span class="section-label">
+            Aplicativo oficial
+          </span>
+
+          <h2>
+            A Clínica Médica Vila Alpina também está no seu celular.
+          </h2>
+
+          <p>
+            Escaneie o QR Code correspondente ao seu aparelho ou utilize os botões para abrir diretamente a loja de aplicativos.
+          </p>
+
+          <div class="aplicativo-vantagens">
+
+            <div>
+              <span>✓</span>
+              <p>Acesso rápido aos serviços da clínica</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>Disponível para Android e iPhone</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>Aplicativo oficial da Clínica Vila Alpina</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="aplicativo-lojas">
+
+          <article class="aplicativo-card aplicativo-card-google">
+
+            <div class="aplicativo-card-cabecalho">
+
+              <div class="aplicativo-loja-marca">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m3.6 2.7 10.7 9.3L3.6 21.3a2.4 2.4 0 0 1-.6-1.6V4.3c0-.6.2-1.1.6-1.6Zm12 10.4 2.8 2.4-11 6.2 8.2-8.6Zm3.9-3.2c.9.5 1.5 1.2 1.5 2.1s-.6 1.6-1.5 2.1l-2.4 1.4-3.2-3.5 3.2-3.5 2.4 1.4ZM7.4 2.3l11 6.2-2.8 2.4-8.2-8.6Z"/>
+                </svg>
+              </div>
+
+              <div>
+                <span>Disponível no</span>
+                <h3>Google Play</h3>
+              </div>
+
+            </div>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=br.com.clinicavilalpina.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="aplicativo-qrcode-link"
+              aria-label="Abrir aplicativo da Clínica Vila Alpina no Google Play"
+            >
+              <img
+                src="src/assets/qrcode-google-play.png"
+                alt="QR Code para instalar o aplicativo da Clínica Vila Alpina pelo Google Play"
+                class="aplicativo-qrcode"
+                loading="lazy"
+              >
+            </a>
+
+            <p>
+              Para celulares e tablets com sistema Android.
+            </p>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=br.com.clinicavilalpina.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="aplicativo-botao-loja"
+            >
+              Baixar para Android
+            </a>
+
+          </article>
+
+          <article class="aplicativo-card aplicativo-card-apple">
+
+            <div class="aplicativo-card-cabecalho">
+
+              <div class="aplicativo-loja-marca">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.11-.06 1.89.61 2.54.66.97-.2 1.9-.77 2.94-.69 1.25.1 2.19.59 2.81 1.49-2.58 1.55-1.97 4.95.4 5.9-.47 1.24-1.08 2.47-1.98 3.37-.41.42-.83.83-1.3 1.24.2.38.39.72.59 1Zm-3.03-16c.13 1.61-1.18 3.01-2.67 3.14-.23-1.86 1.67-3.16 2.67-3.14Z"/>
+                </svg>
+              </div>
+
+              <div>
+                <span>Disponível na</span>
+                <h3>App Store</h3>
+              </div>
+
+            </div>
+
+            <a
+              href="https://apps.apple.com/br/app/cl%C3%ADnica-vila-alpina/id6778940955"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="aplicativo-qrcode-link"
+              aria-label="Abrir aplicativo da Clínica Vila Alpina na App Store"
+            >
+              <img
+                src="src/assets/qrcode-app-store.png"
+                alt="QR Code para instalar o aplicativo da Clínica Vila Alpina pela App Store"
+                class="aplicativo-qrcode"
+                loading="lazy"
+              >
+            </a>
+
+            <p>
+              Para aparelhos iPhone e outros dispositivos Apple compatíveis.
+            </p>
+
+            <a
+              href="https://apps.apple.com/br/app/cl%C3%ADnica-vila-alpina/id6778940955"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="aplicativo-botao-loja"
+            >
+              Baixar para iPhone
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section
+      class="agendamento-formulario-section"
+      id="formulario-agendamento"
+    >
+      <div class="container agendamento-formulario-grid">
+
+        <div class="agendamento-formulario-conteudo">
+
+          <span class="section-label">
+            Solicitação pelo site
+          </span>
+
+          <h2>
+            Preencha seus dados antes de abrir o WhatsApp.
+          </h2>
+
+          <p>
+            Após o envio, o WhatsApp será aberto com todas as informações preenchidas. A consulta será confirmada somente depois do retorno da recepção.
+          </p>
+
+          <div class="agendamento-orientacoes">
+
+            <div>
+              <span>1</span>
+
+              <div>
+                <h3>Informe seus dados</h3>
+                <p>Preencha corretamente nome, telefone e data desejada.</p>
+              </div>
+            </div>
+
+            <div>
+              <span>2</span>
+
+              <div>
+                <h3>Selecione o convênio</h3>
+                <p>Para convênios, o número da carteirinha será obrigatório.</p>
+              </div>
+            </div>
+
+            <div>
+              <span>3</span>
+
+              <div>
+                <h3>Envie pelo WhatsApp</h3>
+                <p>O aplicativo será aberto com seus dados organizados para a recepção.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="agendamento-ajuda-card">
+
+            <img
+              src="src/assets/boneco.png"
+              alt="Assistente da Clínica Médica Vila Alpina"
+            >
+
+            <div>
+              <span>Precisa de atendimento?</span>
+
+              <h3>Comece preenchendo o formulário</h3>
+
+              <a href="#formulario-agendamento">
+                Preencher agora
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <form
+          id="formAgendamento"
+          class="form-card agendamento-form-card"
+        >
+
+          <div class="form-card-cabecalho">
+
+            <span>Formulário de atendimento</span>
+
+            <h3>Solicitar agendamento</h3>
+
+            <p>
+              Preencha os campos abaixo para enviar sua solicitação.
+            </p>
+
+          </div>
+
+          <div class="form-grid">
+
+            <div class="form-group form-group-full">
+
+              <label for="nome">
+                Nome completo
+              </label>
+
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite o nome completo do paciente"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="telefone">
+                Telefone
+              </label>
+
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(11) 99999-9999"
+                autocomplete="tel"
+                inputmode="tel"
+                maxlength="15"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="data">
+                Data desejada
+              </label>
+
+              <input
+                type="date"
+                id="data"
+                name="data"
+                required
+              >
+
+            </div>
+
+            <div class="form-group form-group-full">
+
+              <label for="convenio">
+                Convênio
+              </label>
+
+              <select
+                id="convenio"
+                name="convenio"
+                required
+              >
+                <option value="" selected disabled>
+                  Selecione o convênio
+                </option>
+              </select>
+
+            </div>
+
+            <div
+              class="form-group form-group-full"
+              id="carteirinhaBox"
+            >
+
+              <label for="carteirinha">
+                Número da carteirinha
+              </label>
+
+              <input
+                type="text"
+                id="carteirinha"
+                name="carteirinha"
+                placeholder="Digite o número da carteirinha"
+                autocomplete="off"
+              >
+
+            </div>
+
+            <div class="form-group form-group-full">
+
+              <div
+                id="avisoConvenio"
+                class="aviso"
+                role="alert"
+              ></div>
+
+            </div>
+
+            <div class="form-group form-group-full">
+
+              <label for="especialidade">
+                Especialidade
+              </label>
+
+              <select
+                id="especialidade"
+                name="especialidade"
+                required
+              >
+                <option value="" selected disabled>
+                  Primeiro selecione o convênio
+                </option>
+              </select>
+
+            </div>
+
+            <div class="form-group form-group-full">
+
+              <label for="observacao">
+                Observações
+              </label>
+
+              <textarea
+                id="observacao"
+                name="observacao"
+                placeholder="Informe o melhor horário, motivo da consulta ou alguma orientação importante"
+                rows="5"
+              ></textarea>
+
+            </div>
+
+          </div>
+
+          <button
+            type="submit"
+            class="form-submit-button"
+          >
+            Enviar solicitação pelo WhatsApp
+          </button>
+
+          <div class="form-seguranca">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2 4 5v6c0 5.1 3.4 9.7 8 11 4.6-1.3 8-5.9 8-11V5l-8-3Zm0 5a3 3 0 0 1 3 3v1h1v6H8v-6h1v-1a3 3 0 0 1 3-3Zm0 2a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
+            </svg>
+
+            <small>
+              Seus dados serão utilizados somente para atendimento e agendamento.
+            </small>
+
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+    <section class="agendamento-contato-final">
+      <div class="container agendamento-contato-final-box">
+
+        <div>
+
+          <span>Atendimento da recepção</span>
+
+          <h2>
+            Pronto para enviar sua solicitação?
+          </h2>
+
+          <p>
+            Preencha o formulário para que a mensagem seja enviada com todas as informações necessárias.
+          </p>
+
+        </div>
+
+        <div class="agendamento-contato-final-acoes">
+
+          <a
+            href="#formulario-agendamento"
+            class="btn-primary"
+          >
+            Preencher formulário
+          </a>
+
+          <a
+            href="tel:+551129171717"
+            class="btn-secondary"
+          >
+            Ligar agora
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+
+        <img
+          src="src/assets/logo.png"
+          alt="Clínica Médica Vila Alpina"
+          class="footer-logo"
+        >
+
+        <h3>Clínica Médica Vila Alpina</h3>
+
+        <p>
+          Consultas, exames e procedimentos com atendimento humanizado.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Contato</h4>
+
+        <p>Telefone: 2917-1717</p>
+        <p>WhatsApp: (11) 95970-1266</p>
+        <p>clinicalpina@uol.com.br</p>
+
+      </div>
+
+      <div>
+
+        <h4>Endereço</h4>
+
+        <p>Rua Costa Barros, 505</p>
+        <p>Vila Alpina</p>
+        <p>São Paulo - SP</p>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="src/js/agendamento.js"></script>
+
+</body>
+
+</html>

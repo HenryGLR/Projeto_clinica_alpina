@@ -580,26 +580,29 @@ const convenios = {
   "SÃO CRISTÓVÃO": {
     observacao: "",
     especialidades: [
-      "Cardiologia",
-      "Clínica Geral",
-      "Dermatologia",
-      "Endocrinologia",
-      "Fisioterapia",
-      "Gastroenterologia",
-      "Ginecologia",
-      "Pediatria",
-      "Vascular"
+      "Fisioterapia"
     ],
     exames: [
-      "Eletrocardiograma"
+      "Eletrocardiograma",
+      "Ecocardiograma"
     ]
   },
 
   "SÃO MIGUEL": {
-    observacao: "Atendimento disponível somente para Clínica Geral e Cardiologia.",
     especialidades: [
       "Cardiologia",
-      "Clínica Geral"
+      "Clínica Geral",
+      "Dermatologia",
+      "Endocrinologia",
+      "Gastroenterologia",
+      "Ginecologia",
+      "Ortopedia",
+      "Oftalmologia",
+      "Otorrinolaringologia",
+      "Pediatria",
+      "Psiquiatria",
+      "Urologia",
+      "Vascular"
     ],
     exames: [
       "Eletrocardiograma",

@@ -711,8 +711,7 @@ const convenios = {
       "Otoneurológico",
       "Raio-X",
       "Teste Ergométrico",
-      "Ultrassonografia",
-      "Tomografia"
+      "Ultrassonografia"
     ]
   },
 
